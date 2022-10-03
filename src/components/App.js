@@ -1,21 +1,28 @@
+import React from "react";
+import HomePage from "./HomePage";
+import ContactPage from "./ContactPage";
+import WorkPage from "./WorkPage";
+import NoMatch from "./NoMatch";
+import { Route, Routes } from "react-router-dom";
+import styled from "styled-components";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/contact" element={<ContactPage />} />
+        <Route exact path="/work" element={<WorkPage />} />
+        <Route exact path="*" element={<NoMatch />} />
+      </Routes>
+    </Main>
   );
 }
 
 export default App;
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
