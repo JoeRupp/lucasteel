@@ -5,16 +5,19 @@ import styled from "styled-components";
 const NavBar = () => {
   return (
     <Nav>
-      <h1>LucaSteel</h1>
+      <Logo></Logo>
       <LinkContainer>
-        <NavigationLink to="/" onClick={() => console.log("home")}>
-          Home
+        <NavigationLink to="/work" onClick={() => console.log("work")}>
+          Work
+        </NavigationLink>
+        <NavigationLink to="/shop" onClick={() => console.log("shop")}>
+          Shop
+        </NavigationLink>
+        <NavigationLink to="/about" onClick={() => console.log("about")}>
+          About
         </NavigationLink>
         <NavigationLink to="/contact" onClick={() => console.log("contact")}>
           Contact
-        </NavigationLink>
-        <NavigationLink to="/work" onClick={() => console.log("work")}>
-          Work
         </NavigationLink>
       </LinkContainer>
     </Nav>
@@ -24,18 +27,21 @@ const NavBar = () => {
 export default NavBar;
 
 const Nav = styled.nav`
+  background-color: #333333;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  height: 25%;
   width: 100%;
 `;
 
 const LinkContainer = styled.div`
-  height: 25%;
-  width: 100%;
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
 `;
 
 const NavigationLink = styled(NavLink)`
   color: black;
 `;
+
+const Logo = styled.image``;
