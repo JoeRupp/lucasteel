@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import MainLogo from "./MainLogo";
 import styled from "styled-components";
 
 const NavBar = () => {
   return (
     <Nav>
-      <Logo></Logo>
+      <MainLogo to="/" />
       <LinkContainer>
         <NavigationLink to="/work" onClick={() => console.log("work")}>
           Work
@@ -31,7 +32,11 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 10vh;
+  position: fixed;
 `;
 
 const LinkContainer = styled.div`
@@ -41,7 +46,9 @@ const LinkContainer = styled.div`
 `;
 
 const NavigationLink = styled(NavLink)`
-  color: black;
+  color: white;
 `;
 
-const Logo = styled.image``;
+const Logo = styled.image`
+  width: 5vw;
+`;

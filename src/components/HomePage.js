@@ -4,7 +4,9 @@ import styled from "styled-components";
 const HomePage = () => {
   return (
     <section>
-      <h1>Home</h1>
+      <img
+        src={require("../assets/photos/pete-wright-n1RJ7pXgGTE-unsplash.jpg")}
+      />
     </section>
   );
 };
