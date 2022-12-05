@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import MainLogo from "./MainLogo";
 import styled from "styled-components";
 
 const NavBar = () => {
+  const [navSize, setNavSize] = useState(false);
+
+  const changeNavSize = () => {
+    if (window.scrollY >= 90) {
+      setNavSize(true);
+    } else {
+      setNavSize(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeNavSize);
+
   return (
-    <Nav>
-      <MainLogo to="/" />
+    <Nav navSize={navSize}>
+      <MainLogo />
       <LinkContainer>
         <NavigationLink to="/work" onClick={() => console.log("work")}>
           Work
@@ -28,15 +40,18 @@ const NavBar = () => {
 export default NavBar;
 
 const Nav = styled.nav`
-  background-color: #333333;
+  /* overflow: hidden; */
+  background-color: ${(props) =>
+    props.navSize ? "black" : "rgba(0, 0, 0, 0.3)"};
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: ${(props) => (props.navSize ? "8px 10%" : "30px 10%")};
+  transition: 0.4s;
   height: 10vh;
   position: fixed;
+  z-index: 99;
 `;
 
 const LinkContainer = styled.div`
@@ -47,8 +62,5 @@ const LinkContainer = styled.div`
 
 const NavigationLink = styled(NavLink)`
   color: white;
-`;
-
-const Logo = styled.image`
-  width: 5vw;
+  text-decoration: none;
 `;
