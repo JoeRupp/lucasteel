@@ -32,7 +32,6 @@ const NavBar = () => {
 export default NavBar;
 
 const Nav = styled.nav`
-  /* overflow: hidden; */
   background-color: ${(props) =>
     props.navStyle ? "black" : "rgba(0, 0, 0, 0.5)"};
   display: flex;
@@ -54,7 +53,7 @@ const LinkContainer = styled.div`
 
 const NavigationLink = styled(NavLink)`
   color: white;
-  font-size: 25px;
+  font-size: 1.5rem;
   text-decoration: none;
   background-color: transparent;
   border: none;
