@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "./Button";
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
       />
       <ServicesSection>
         <SubHeader>WHAT WE OFFER:</SubHeader>
+        <Button name="Contact" link="contact" />
       </ServicesSection>
     </HomeContainer>
   );
