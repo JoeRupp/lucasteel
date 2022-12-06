@@ -36,7 +36,8 @@ const Description = styled.p`
 const Image = styled.img`
   overflow: hidden;
   position: relative;
-  width: 100%;
+  margin: 0em 1em;
+  width: 90%;
   height: 0px;
   object-fit: cover;
   transition: all 0.35s;

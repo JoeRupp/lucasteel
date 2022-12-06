@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import ExpandSection from "./ExpandSection";
-import Footer from "./Footer";
 
 const HomePage = () => {
   return (
@@ -56,7 +55,6 @@ const HomePage = () => {
         </ExplandableOrganizer>
         <Button name="Get a Quote" link="contact" />
       </ServicesSection>
-      <Footer />
     </HomeContainer>
   );
 };
