@@ -6,6 +6,7 @@ import ContactPage from "./ContactPage";
 import WorkPage from "./WorkPage";
 import ShopPage from "./ShopPage";
 import NoMatch from "./NoMatch";
+import Footer from "./Footer";
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 
@@ -21,6 +22,7 @@ const App = () => {
         <Route exact path="/contact" element={<ContactPage />} />
         <Route exact path="*" element={<NoMatch />} />
       </Routes>
+      <Footer />
     </Main>
   );
 };
