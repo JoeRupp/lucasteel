@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import TeamMemberProfile from "./TeamMemberProfile";
+import sparkBackgroundImage from "../assets/photos/sparkBanner.jpeg";
 
 const AboutPage = () => {
   return (
@@ -50,25 +51,36 @@ const AboutContainer = styled.section`
 `;
 
 const GeneralAboutSection = styled.section`
-  background-color: white;
-  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  background-size: cover;
+  overflow: hidden;
+  height: 110vh;
   width: 80%;
   padding: 5% 10%;
-  display: grid;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 `;
 
 const HeroImage = styled.img`
   width: 100%;
   height: 110vh;
   object-fit: cover;
+  position: fixed;
+  z-index: -1;
 `;
 
 const SubHeader = styled.h2`
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
+  color: white;
 `;
 
-const AboutText = styled.p``;
+const AboutText = styled.p`
+  color: white;
+  font-size: 1.2rem;
+  width: ;
+`;
 
 const TeamSection = styled.section`
   background-color: white;
