@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "./Button";
 import { useForm, ValidationError } from "@formspree/react";
@@ -10,7 +11,13 @@ const ContactPage = () => {
       <ContactContainer>
         <ContactDetails>
           <Header>Contact us for a quote:</Header>
-          <Info>lucasteelandfabrication@gmail.com</Info>
+          <EmailInfo
+            onClick={() =>
+              (window.location = "mailto:lucasteelandfabrication@gmail.com")
+            }
+          >
+            lucasteelandfabrication@gmail.com
+          </EmailInfo>
           <Info>(720) 329-9769</Info>
           <Info>Wheat Ridge, CO 80033</Info>
         </ContactDetails>
@@ -26,7 +33,13 @@ const ContactPage = () => {
     <ContactContainer>
       <ContactDetails>
         <Header>Contact us for a quote:</Header>
-        <Info>lucasteelandfabrication@gmail.com</Info>
+        <EmailInfo
+          onClick={() =>
+            (window.location = "mailto:lucasteelandfabrication@gmail.com")
+          }
+        >
+          lucasteelandfabrication@gmail.com
+        </EmailInfo>
         <Info>(720) 329-9769</Info>
         <Info>Wheat Ridge, CO 80033</Info>
       </ContactDetails>
@@ -127,7 +140,19 @@ const FormFieldMessage = styled.div`
 
 const ContactDetails = styled.div``;
 
-const Info = styled.h2``;
+const Info = styled.h2`
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+`;
+
+const EmailInfo = styled(Link)`
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+`;
 
 const Header = styled.h1`
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
