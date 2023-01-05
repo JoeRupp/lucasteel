@@ -6,8 +6,7 @@ const NoMatch = () => {
     <NoMatchSection>
       <h1>404</h1>
       <p>
-        We couldn't find what you were looking for - try something different I
-        guess?
+        Sorry, we couldn't find what you were looking for. Double check the URL.
       </p>
     </NoMatchSection>
   );

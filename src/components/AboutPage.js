@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import TeamMemberProfile from "./TeamMemberProfile";
-import sparkBackgroundImage from "../assets/photos/sparkBanner.jpeg";
 
 const AboutPage = () => {
   return (
@@ -61,7 +60,7 @@ const GeneralAboutSection = styled.section`
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
   background-size: cover;
   overflow: hidden;
-  height: 110vh;
+  height: 120vh;
   width: 80%;
   padding: 5% 10%;
   display: flex;
