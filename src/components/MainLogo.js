@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const MainLogo = () => {
   return (
-    <NavigationLink to="/" onClick={() => console.log("home")}>
+    <NavigationLink to="/">
       <SVG
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"

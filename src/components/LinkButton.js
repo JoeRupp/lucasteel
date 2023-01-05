@@ -2,22 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Button = ({ name, action, type, disabled }) => {
+const LinkButton = ({ name, action, link }) => {
   return (
-    <StyledBtn onClick={action} type={type} disabled={disabled}>
+    <StyledBtn to={link} onClick={action}>
       {name}
     </StyledBtn>
   );
 };
 
-export default Button;
+export default LinkButton;
 
-const StyledBtn = styled.button`
+const StyledBtn = styled(Link)`
   display: block;
   width: 200px;
   height: 40px;
-  line-height: 38px;
-  font-family: korolev-compressed, sans-serif;
+  line-height: 42px;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;

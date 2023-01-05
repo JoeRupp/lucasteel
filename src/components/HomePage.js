@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./Button";
+import LinkButton from "./LinkButton";
 import ExpandSection from "./ExpandSection";
 
 const HomePage = () => {
@@ -53,7 +53,7 @@ const HomePage = () => {
             image="pete-wright-n1RJ7pXgGTE-unsplash.jpg"
           />
         </ExplandableOrganizer>
-        <Button name="Get a Quote" link="contact" />
+        <LinkButton name="Get a Quote" link="contact" />
       </ServicesSection>
     </HomeContainer>
   );

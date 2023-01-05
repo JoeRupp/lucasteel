@@ -34,7 +34,7 @@ const ContactPage = () => {
         <FormOrganizer>
           <FormField>
             <Label htmlFor="firstName">First Name:</Label>
-            <Input type="text"></Input>
+            <Input id="lastName" type="text" name="lastName"></Input>
             <ValidationError
               prefix="First Name"
               field="firstName"
@@ -43,7 +43,7 @@ const ContactPage = () => {
           </FormField>
           <FormField>
             <Label htmlFor="lastName">Last Name:</Label>
-            <Input type="text"></Input>
+            <Input id="lastName" type="text" name="lastName"></Input>
             <ValidationError
               prefix="Last Name"
               field="lastName"
@@ -86,10 +86,10 @@ const ContactPage = () => {
             errors={state.errors}
           />
         </FormFieldMessage>
-        <button type="submit" disabled={state.submitting}>
+        {/* <button type="submit" disabled={state.submitting}>
           Submit
-        </button>
-        {/* <Button name="Submit" type="submit" disabled={state.submitting} /> */}
+        </button> */}
+        <Button name="Submit" type="submit" disabled={state.submitting} />
       </ContactForm>
     </ContactContainer>
   );
