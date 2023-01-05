@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import { useForm, ValidationError } from "@formspree/react";
@@ -6,14 +6,13 @@ import { useForm, ValidationError } from "@formspree/react";
 const ContactPage = () => {
   const [state, handleSubmit] = useForm("mwkjkblv");
   if (state.succeeded) {
-    console.log("yes?");
-
     return (
       <ContactContainer>
         <ContactDetails>
           <Header>Contact us for a quote:</Header>
           <Info>lucasteelandfabrication@gmail.com</Info>
           <Info>(720) 329-9769</Info>
+          <Info>Wheat Ridge, CO 80033</Info>
         </ContactDetails>
         <FormCompletionMessage>
           <Header>Form Submitted - Thank you!</Header>
@@ -29,32 +28,40 @@ const ContactPage = () => {
         <Header>Contact us for a quote:</Header>
         <Info>lucasteelandfabrication@gmail.com</Info>
         <Info>(720) 329-9769</Info>
+        <Info>Wheat Ridge, CO 80033</Info>
       </ContactDetails>
       <ContactForm onSubmit={handleSubmit}>
         <FormOrganizer>
           <FormField>
-            <Label htmlFor="firstName">First Name:</Label>
-            <Input id="lastName" type="text" name="lastName"></Input>
-            <ValidationError
-              prefix="First Name"
-              field="firstName"
-              errors={state.errors}
-            />
+            <Label htmlFor="firstName">First Name*</Label>
+            <Input
+              id="firstName"
+              type="text"
+              name="firstName"
+              placeholder="John"
+              required
+            ></Input>
           </FormField>
           <FormField>
-            <Label htmlFor="lastName">Last Name:</Label>
-            <Input id="lastName" type="text" name="lastName"></Input>
-            <ValidationError
-              prefix="Last Name"
-              field="lastName"
-              errors={state.errors}
-            />
+            <Label htmlFor="lastName">Last Name</Label>
+            <Input
+              id="lastName"
+              type="text"
+              name="lastName"
+              placeholder="Doe"
+            ></Input>
           </FormField>
         </FormOrganizer>
         <FormOrganizer>
           <FormField>
-            <Label htmlFor="email">Email:</Label>
-            <Input id="email" type="email" name="email"></Input>
+            <Label htmlFor="email">Email*</Label>
+            <Input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="john@email.com"
+              required
+            ></Input>
             <ValidationError
               prefix="Email"
               field="email"
@@ -62,33 +69,27 @@ const ContactPage = () => {
             />
           </FormField>
           <FormField>
-            <Label htmlFor="phone">Phone:</Label>
-            <Input id="phone" type="text" name="phone"></Input>
-            <ValidationError
-              prefix="Phone"
-              field="phone"
-              errors={state.errors}
-            />
+            <Label htmlFor="telephone">Phone</Label>
+            <Input
+              id="telephone"
+              type="telephone"
+              name="telephone"
+              placeholder="(720) 329-9769"
+            ></Input>
           </FormField>
         </FormOrganizer>
         <FormFieldMessage>
-          <Label>Message:</Label>
+          <Label>Message</Label>
           <MessageArea
             id="message"
             name="message"
             type="text"
             rows="5"
             cols="65"
-          />
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
+            placeholder="Tell us a little about what you are looking for here."
           />
         </FormFieldMessage>
-        {/* <button type="submit" disabled={state.submitting}>
-          Submit
-        </button> */}
+        <p>* required field</p>
         <Button name="Submit" type="submit" disabled={state.submitting} />
       </ContactForm>
     </ContactContainer>
