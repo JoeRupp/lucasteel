@@ -21,7 +21,13 @@ const NavBar = () => {
       <MainLogo />
       <LinkContainer>
         <NavigationLink to="/work">Work</NavigationLink>
-        <NavigationLink to="/shop">Shop</NavigationLink>
+        <ExternalLink
+          href="https://www.etsy.com/shop/LucaSteel?listing_id=1170224592&ref=simple-shop-header-name"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Shop
+        </ExternalLink>
         <NavigationLink to="/about">About</NavigationLink>
         <NavigationLink to="/contact">Contact</NavigationLink>
       </LinkContainer>
@@ -52,6 +58,45 @@ const LinkContainer = styled.div`
 `;
 
 const NavigationLink = styled(NavLink)`
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  &:after {
+    background-color: white;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    width: 100%;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  &.active:after {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(1);
+    width: 100%;
+  }
+`;
+
+const ExternalLink = styled.a`
   color: white;
   font-size: 1.5rem;
   text-decoration: none;

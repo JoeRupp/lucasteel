@@ -10,7 +10,13 @@ const Footer = () => {
       <FooterDirectory>
         <NavigationLink to="/">Home</NavigationLink>
         <NavigationLink to="/work">Work</NavigationLink>
-        <NavigationLink to="/shop">Shop</NavigationLink>
+        <ExternalLink
+          href="https://www.etsy.com/shop/LucaSteel?listing_id=1170224592&ref=simple-shop-header-name"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Shop
+        </ExternalLink>
         <NavigationLink to="/about">About</NavigationLink>
         <NavigationLink to="/contact">Contact</NavigationLink>
       </FooterDirectory>
@@ -52,6 +58,16 @@ const FooterDirectory = styled.div`
 `;
 
 const NavigationLink = styled(NavLink)`
+  cursor: pointer;
+  color: black;
+  font-size: 1.1rem;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const ExternalLink = styled.a`
   cursor: pointer;
   color: black;
   font-size: 1.1rem;
