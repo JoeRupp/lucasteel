@@ -1,8 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
+import { useForm, ValidationError } from "@formspree/react";
 
 const ContactPage = () => {
+  const [state, handleSubmit] = useForm("mwkjkblv");
+  if (state.succeeded) {
+    console.log("yes?");
+
+    return (
+      <ContactContainer>
+        <ContactDetails>
+          <Header>Contact us for a quote:</Header>
+          <Info>lucasteelandfabrication@gmail.com</Info>
+          <Info>(720) 329-9769</Info>
+        </ContactDetails>
+        <FormCompletionMessage>
+          <Header>Form Submitted - Thank you!</Header>
+          <Info>We'll get back to you as soon as we can.</Info>
+        </FormCompletionMessage>
+      </ContactContainer>
+    );
+  }
+
   return (
     <ContactContainer>
       <ContactDetails>
@@ -10,37 +30,67 @@ const ContactPage = () => {
         <Info>lucasteelandfabrication@gmail.com</Info>
         <Info>(720) 329-9769</Info>
       </ContactDetails>
-      <ContactForm>
+      <ContactForm onSubmit={handleSubmit}>
         <FormOrganizer>
           <FormField>
-            <Label>First Name:</Label>
+            <Label htmlFor="firstName">First Name:</Label>
             <Input type="text"></Input>
+            <ValidationError
+              prefix="First Name"
+              field="firstName"
+              errors={state.errors}
+            />
           </FormField>
           <FormField>
-            <Label>Last Name:</Label>
+            <Label htmlFor="lastName">Last Name:</Label>
             <Input type="text"></Input>
+            <ValidationError
+              prefix="Last Name"
+              field="lastName"
+              errors={state.errors}
+            />
           </FormField>
         </FormOrganizer>
         <FormOrganizer>
           <FormField>
-            <Label>Email:</Label>
-            <Input type="email"></Input>
+            <Label htmlFor="email">Email:</Label>
+            <Input id="email" type="email" name="email"></Input>
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
           </FormField>
           <FormField>
-            <Label>Phone:</Label>
-            <Input type="text"></Input>
+            <Label htmlFor="phone">Phone:</Label>
+            <Input id="phone" type="text" name="phone"></Input>
+            <ValidationError
+              prefix="Phone"
+              field="phone"
+              errors={state.errors}
+            />
           </FormField>
         </FormOrganizer>
         <FormFieldMessage>
           <Label>Message:</Label>
-          <MessageArea type="text" rows="5" cols="65" />
+          <MessageArea
+            id="message"
+            name="message"
+            type="text"
+            rows="5"
+            cols="65"
+          />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
         </FormFieldMessage>
-        <Button name="Submit" />
+        <button type="submit" disabled={state.submitting}>
+          Submit
+        </button>
+        {/* <Button name="Submit" type="submit" disabled={state.submitting} /> */}
       </ContactForm>
-      <FormCompletionMessage>
-        <Header>Form Submitted - Thank you!</Header>
-        <Info>We'll get back to you as soon as we can.</Info>
-      </FormCompletionMessage>
     </ContactContainer>
   );
 };
@@ -95,6 +145,4 @@ const Label = styled.label`
 
 const MessageArea = styled.textarea``;
 
-const FormCompletionMessage = styled.div`
-  display: none;
-`;
+const FormCompletionMessage = styled.div``;
