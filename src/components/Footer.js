@@ -27,7 +27,7 @@ const Footer = () => {
         />
       </SocialContainer>
       <FooterCopyRight>
-        Copyright © 2022 LucaSteel Welding & Fabrication All Rights Reserved.
+        Copyright © 2023 LucaSteel Welding & Fabrication All Rights Reserved.
       </FooterCopyRight>
     </StyledFooter>
   );
