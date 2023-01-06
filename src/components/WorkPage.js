@@ -2,26 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import WorkPreviewSection from "./WorkPreviewSection";
 
-const WorkPage = () => {
-  return (
-    <WorkContainer>
-      <WorkPreviewSection
-        title="Work"
-        description="test test test"
-        image="pete-wright-n1RJ7pXgGTE-unsplash.jpg"
-      />
-      <WorkPreviewSection
-        title="Work"
-        description="test test test"
-        image="pete-wright-n1RJ7pXgGTE-unsplash.jpg"
-      />
-      <WorkPreviewSection
-        title="Work"
-        description="test test test"
-        image="pete-wright-n1RJ7pXgGTE-unsplash.jpg"
-      />
-    </WorkContainer>
-  );
+const WorkPage = ({ projects }) => {
+  const workPreviews = () => {
+    return projects.map((project) => {
+      return (
+        <WorkPreviewSection
+          id={project.id}
+          key={project.id}
+          title={project.title}
+          description={project.description}
+          image={project.image}
+        />
+      );
+    });
+  };
+
+  return <WorkContainer>{workPreviews()}</WorkContainer>;
 };
 
 export default WorkPage;

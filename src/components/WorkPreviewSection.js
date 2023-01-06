@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const WorkPreviewSection = ({ title, description, image, link, id }) => {
+const WorkPreviewSection = ({ title, description, image, id }) => {
   return (
     <WorkContainer to={`/project/${id}`}>
       <Image src={require(`../assets/photos/${image}`)} />
