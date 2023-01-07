@@ -44,6 +44,7 @@ const LineBreak = styled.div`
 `;
 
 const Description = styled.p`
+  width: 90%;
   color: white;
   z-index: 1;
 `;
