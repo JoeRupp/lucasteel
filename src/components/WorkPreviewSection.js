@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const WorkPreviewSection = ({ title, description, image, id }) => {
+const WorkPreviewSection = ({ title, description, bannerImage, id }) => {
   return (
     <WorkContainer to={`/project/${id}`}>
-      <Image src={require(`../assets/photos/${image}`)} />
+      <Image src={require(`../assets/photos/${bannerImage}`)} />
       <InfoContainer>
         <Title>{title}</Title>
         <LineBreak />
@@ -27,7 +27,7 @@ const Image = styled.img`
 `;
 
 const InfoContainer = styled.div`
-  margin: 0 10% 8% 10%;
+  margin: 0 10% 3% 10%;
 `;
 
 const Title = styled.h1`
@@ -59,7 +59,7 @@ const WorkContainer = styled(Link)`
   justify-content: flex-end;
   flex-direction: column;
   text-decoration: none;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
   cursor: pointer;
   &:hover ${Image} {
     transition: all 0.35s;
