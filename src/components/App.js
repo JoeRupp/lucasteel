@@ -17,28 +17,21 @@ const App = () => {
       title: "Work 1",
       id: 1,
       description: "rabble rabble 1",
-      image: "pete-wright-n1RJ7pXgGTE-unsplash.jpg",
+      images: ["pete-wright-n1RJ7pXgGTE-unsplash.jpg"],
     },
     {
       title: "Work 2",
       id: 2,
       description: "rabble rabble 2",
-      image: "pete-wright-n1RJ7pXgGTE-unsplash.jpg",
+      images: ["pete-wright-n1RJ7pXgGTE-unsplash.jpg"],
     },
     {
       title: "Work 3",
       id: 3,
       description: "rabble rabble 3",
-      image: "pete-wright-n1RJ7pXgGTE-unsplash.jpg",
+      images: ["pete-wright-n1RJ7pXgGTE-unsplash.jpg"],
     },
   ];
-
-  const findProject = (id) => {
-    console.log(id);
-    return allProjects.find((project) => {
-      return project.id === Number(id);
-    });
-  };
 
   return (
     <Main>
@@ -50,12 +43,7 @@ const App = () => {
           path="/work"
           element={<WorkPage projects={allProjects} />}
         />
-        <Route
-          path="/project/:id"
-          render={({ match }) => (
-            <ProjectPage currentProject={findProject(match.params.id)} />
-          )}
-        />
+        <Route path="/project/:id" element={<ProjectPage />} />
         {/* <Route exact path="/shop" element={<ShopPage />} /> */}
         <Route exact path="/about" element={<AboutPage />} />
         <Route exact path="/contact" element={<ContactPage />} />

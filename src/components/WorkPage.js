@@ -11,7 +11,7 @@ const WorkPage = ({ projects }) => {
           key={project.id}
           title={project.title}
           description={project.description}
-          image={project.image}
+          image={project.images[0]}
         />
       );
     });

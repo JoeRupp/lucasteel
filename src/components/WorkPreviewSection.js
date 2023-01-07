@@ -21,6 +21,7 @@ const Image = styled.img`
   position: absolute;
   object-fit: cover;
   width: 100%;
+  height: 100%;
   transition: all 0.35s;
   z-index: -1;
 `;
