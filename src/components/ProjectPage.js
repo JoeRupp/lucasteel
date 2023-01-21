@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import styled from "styled-components";
 import allProjects from "../data/projects";
+import ImageModal from "./ImageModal";
 
 const ProjectPage = () => {
   const { id } = useParams();
+
+  const [modalStatus, setModalStatus] = useState(false);
+  const [currentModalPicture, setCurrentModalPicture] = useState(null);
 
   const findProject = (id) => {
     return allProjects.find((project) => {
@@ -12,17 +16,41 @@ const ProjectPage = () => {
     });
   };
 
+  const handleModalPopUp = (pic) => {
+    if (modalStatus) {
+      setModalStatus(false);
+      setCurrentModalPicture(null);
+    } else {
+      setModalStatus(true);
+      setCurrentModalPicture(pic);
+    }
+  };
+
   const currentProject = findProject(id);
 
   const ProjectImages = (proj) => {
     return proj.images.map((pic) => {
-      return <ProjectPicture src={require(`../assets/photos/${pic}`)} />;
+      return (
+        <ProjectPicture
+          key={proj.images.indexOf(pic)}
+          src={require(`../assets/photos/${pic}`)}
+          onClick={() => handleModalPopUp(pic)}
+        />
+      );
     });
   };
 
   if (currentProject) {
     return (
       <ProjectContainer>
+        {modalStatus ? (
+          <ImageModal
+            picture={currentModalPicture}
+            handleModalPopUp={handleModalPopUp}
+          />
+        ) : (
+          ""
+        )}
         <HeroImage
           src={require(`../assets/photos/${currentProject.bannerImage}`)}
         />
@@ -63,12 +91,12 @@ const PictureOrganizer = styled.div`
   align-items: center;
   gap: 2em;
   grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
 `;
 
 const ProjectPicture = styled.img`
   height: auto;
   width: 100%;
+  cursor: pointer;
 `;
 
 const ProjectInfoSection = styled.section`
