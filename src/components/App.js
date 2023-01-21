@@ -5,7 +5,7 @@ import AboutPage from "./AboutPage";
 import ContactPage from "./ContactPage";
 import WorkPage from "./WorkPage";
 import ProjectPage from "./ProjectPage";
-import ShopPage from "./ShopPage";
+// import ShopPage from "./ShopPage";
 import NoMatch from "./NoMatch";
 import Footer from "./Footer";
 import { Route, Routes } from "react-router-dom";
