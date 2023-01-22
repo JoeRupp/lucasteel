@@ -10,7 +10,7 @@ const HomePage = () => {
         src={require("../assets/photos/rob-lambert-9Q_pLLP_jmA-unsplash.jpg")}
       />
       <ServicesSection>
-        <SubHeader>WHAT WE OFFER:</SubHeader>
+        <Header>WHAT WE OFFER:</Header>
         <ExplandableOrganizer>
           <ExpandSection
             title="Custom Projects"
@@ -78,7 +78,7 @@ const ServicesSection = styled.section`
   padding: 5% 10%;
 `;
 
-const SubHeader = styled.h2`
+const Header = styled.h1`
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
 `;
