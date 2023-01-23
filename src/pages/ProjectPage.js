@@ -3,6 +3,7 @@ import { useParams, Navigate } from "react-router-dom";
 import styled from "styled-components";
 import allProjects from "../data/projects";
 import ImageModal from "../components/ImageModal";
+import { COLORS } from "../constants";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -100,7 +101,7 @@ const ProjectPicture = styled.img`
 `;
 
 const ProjectInfoSection = styled.section`
-  background-color: white;
+  background-color: ${COLORS.white};
   height: 100%;
   width: 80%;
   padding: 5% 10%;

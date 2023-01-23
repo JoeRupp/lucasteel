@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "../constants";
 
 const TeamMemberProfile = ({ name, role, bio, picture }) => {
   return (
@@ -32,7 +33,7 @@ const ProfileName = styled.h3`
 
 const ProfileRole = styled.h4`
   font-size: 1.3rem;
-  color: lightgray;
+  color: ${COLORS.steelSiver};
   margin: 0;
 `;
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../components/Button";
 import { useForm, ValidationError } from "@formspree/react";
+import { COLORS } from "../constants";
 
 const ContactPage = () => {
   const [state, handleSubmit] = useForm("mwkjkblv");
@@ -148,7 +149,7 @@ const Info = styled.h2`
 
 const EmailInfo = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: ${COLORS.black};
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1px;

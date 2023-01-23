@@ -45,7 +45,7 @@ const Image = styled.img`
 `;
 
 const Container = styled.div`
-  background-color: transparent; // rgb(220, 219, 219, 0.5)
+  background-color: transparent;
   width: 100%;
   height: 250px;
   &:hover ${LineBreak} {

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import TeamMemberProfile from "../components/TeamMemberProfile";
+import { COLORS } from "../constants";
 
 const AboutPage = () => {
   return (
@@ -31,12 +32,6 @@ const AboutPage = () => {
             role="Owner/Founder"
             bio="If you can dream it we can build it.” With five years of experience welding and fabricating, Lucas has turned his hobby into a business where anything can be made. With a background of working with talented local artists, Lucas quickly excelled in welding sculptures and decorative furnishings. With a passion for creativity and an eye for detail, Lucas can find the solutions clients need while fitting a unique artistic design."
             picture="LucasProfile.png"
-          />
-          <TeamMemberProfile
-            name="Zachary Miner"
-            role="Shop Manager/CAD Engineer"
-            bio="Graduating from Colorado School of Mines with a degree in Mechanical Engineering, Zachary uses his engineering experience and forward-thinking design to create the 3D CAD design. He then uses his welding skills to bring these ideas to life. "
-            picture="ZachProfile.png"
           />
           <TeamMemberProfile
             name="Hanna Rupp"
@@ -79,29 +74,29 @@ const HeroImage = styled.img`
 const SubHeader = styled.h2`
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
-  color: white;
+  color: ${COLORS.white};
 `;
 
 const SubHeaderTwo = styled.h2`
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
-  color: black;
+  color: ${COLORS.black};
 `;
 
 const AboutText = styled.p`
-  color: white;
+  color: ${COLORS.white};
   font-size: 1.2rem;
 `;
 
 const TeamProfileOrganizer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
-  gap: 3rem;
+  gap: 5rem;
 `;
 
 const TeamSection = styled.section`
-  background-color: white;
+  background-color: ${COLORS.white};
   height: 100%;
   width: 80%;
   padding: 5% 10%;

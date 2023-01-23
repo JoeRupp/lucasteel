@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import LinkButton from "../components/LinkButton";
 import ExpandSection from "../components/ExpandSection";
+import { COLORS } from "../constants";
 
 const HomePage = () => {
   return (
@@ -72,7 +73,7 @@ const HeroImage = styled.img`
 `;
 
 const ServicesSection = styled.section`
-  background-color: white;
+  background-color: ${COLORS.white};
   height: 100%;
   width: 80%;
   padding: 5% 10%;
