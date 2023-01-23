@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "../constants";
 
 const ExpandSection = ({ title, description, image }) => {
   return (
@@ -15,7 +16,7 @@ const ExpandSection = ({ title, description, image }) => {
 export default ExpandSection;
 
 const Title = styled.h3`
-  color: black;
+  color: ${COLORS.black};
   font-size: 1.5rem;
   margin: 3em 1em 0em 1em;
   transition: all 0.35s;
@@ -23,7 +24,7 @@ const Title = styled.h3`
 
 const LineBreak = styled.div`
   width: 90%;
-  background-color: black;
+  background-color: ${COLORS.black};
   height: 1.5px;
   margin: 0em 1em;
   transition: all 0.35s;

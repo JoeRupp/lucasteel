@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import styled from "styled-components";
 import allProjects from "../data/projects";
-import ImageModal from "./ImageModal";
+import ImageModal from "../components/ImageModal";
 
 const ProjectPage = () => {
   const { id } = useParams();

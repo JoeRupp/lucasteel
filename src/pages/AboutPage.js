@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import TeamMemberProfile from "./TeamMemberProfile";
+import TeamMemberProfile from "../components/TeamMemberProfile";
 
 const AboutPage = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import LinkButton from "./LinkButton";
-import ExpandSection from "./ExpandSection";
+import LinkButton from "../components/LinkButton";
+import ExpandSection from "../components/ExpandSection";
 
 const HomePage = () => {
   return (
