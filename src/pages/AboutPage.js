@@ -6,9 +6,12 @@ import { COLORS } from "../constants";
 const AboutPage = () => {
   return (
     <AboutContainer>
-      <HeroImage src={require("../assets/photos/sparkBanner.jpeg")} />
+      <HeroImage
+        id="aboutPageHeroImage"
+        src={require("../assets/photos/sparkBanner.jpeg")}
+      />
       <GeneralAboutSection>
-        <SubHeader>About Us:</SubHeader>
+        <SubHeader>ABOUT US:</SubHeader>
         <AboutText>
           LucaSteel and Fabrication is a welding shop based out of Denver,
           Colorado. We started the shop with the goal to create one-of-a-kind
@@ -25,8 +28,8 @@ const AboutPage = () => {
         </AboutText>
       </GeneralAboutSection>
       <TeamSection>
-        <SubHeaderTwo>Meet the Team:</SubHeaderTwo>
-        <TeamProfileOrganizer>
+        <SubHeaderTwo>MEET THE TEAM:</SubHeaderTwo>
+        <TeamProfileOrganizer id="teamProfileOrganizer">
           <TeamMemberProfile
             name="Lucas Onorato"
             role="Owner/Founder"
@@ -71,13 +74,13 @@ const HeroImage = styled.img`
   z-index: -1;
 `;
 
-const SubHeader = styled.h2`
+const SubHeader = styled.h1`
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
   color: ${COLORS.white};
 `;
 
-const SubHeaderTwo = styled.h2`
+const SubHeaderTwo = styled.h1`
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
   color: ${COLORS.black};
