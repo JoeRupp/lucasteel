@@ -32,6 +32,7 @@ describe("LucaSteel footer", () => {
     cy.get("footer").contains("Contact").click();
     cy.get("footer").contains("Home").click();
     cy.url().should("include", "");
+    cy.get("h1").should("have.text", "WHAT WE OFFER:");
   });
 
   it("should be able to navigate to the LucaSteel Facebook", () => {

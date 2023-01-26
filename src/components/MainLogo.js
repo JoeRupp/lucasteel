@@ -5,7 +5,7 @@ import { COLORS } from "../constants";
 
 const MainLogo = () => {
   return (
-    <NavigationLink to="/">
+    <NavigationLink id="lucaSteelLogo" to="/">
       <SVG
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
