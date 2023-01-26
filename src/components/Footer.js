@@ -23,11 +23,13 @@ const Footer = () => {
       </FooterDirectory>
       <SocialContainer>
         <FacebookIcon
+          id="facebookIcon"
           href="https://www.facebook.com/LucaSteelandFabrication/"
           target="_blank"
           rel="noopener noreferrer"
         />
         <InstagramIcon
+          id="instagramIcon"
           href="https://www.instagram.com/lucas_steel_/"
           target="_blank"
           rel="noopener noreferrer"
