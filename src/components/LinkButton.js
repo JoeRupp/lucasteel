@@ -5,7 +5,7 @@ import { COLORS } from "../constants";
 
 const LinkButton = ({ name, action, link }) => {
   return (
-    <StyledBtn to={link} onClick={action}>
+    <StyledBtn id="linkButton" to={link} onClick={action}>
       {name}
     </StyledBtn>
   );

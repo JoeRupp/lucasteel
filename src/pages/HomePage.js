@@ -8,11 +8,12 @@ const HomePage = () => {
   return (
     <HomeContainer>
       <HeroImage
+        id="homePageHeroImage"
         src={require("../assets/photos/rob-lambert-9Q_pLLP_jmA-unsplash.jpg")}
       />
       <ServicesSection>
         <Header>WHAT WE OFFER:</Header>
-        <ExplandableOrganizer>
+        <ExpandableOrganizer id="expandableOrganizer">
           <ExpandSection
             title="Custom Projects"
             description="At LucaSteel and Fabrication, we pride ourselves on our ability to complete almost any project. Whether it be simple or completely new and unknown."
@@ -53,7 +54,7 @@ const HomePage = () => {
             description="We use CAD to be able to show customers what a project will look like before construction. As well as the ability to design parts in-house and produce those parts."
             image="pete-wright-n1RJ7pXgGTE-unsplash.jpg"
           />
-        </ExplandableOrganizer>
+        </ExpandableOrganizer>
         <LinkButton name="Get a Quote" link="contact" />
       </ServicesSection>
     </HomeContainer>
@@ -84,7 +85,7 @@ const Header = styled.h1`
   font-size: 2rem;
 `;
 
-const ExplandableOrganizer = styled.div`
+const ExpandableOrganizer = styled.div`
   margin: 5% 0%;
   display: grid;
   justify-items: center;
