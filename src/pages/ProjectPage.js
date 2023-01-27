@@ -58,7 +58,9 @@ const ProjectPage = () => {
         <ProjectInfoSection>
           <ProjectTitle>{currentProject.title}</ProjectTitle>
           <ProjectDescription>{currentProject.description}</ProjectDescription>
-          <PictureOrganizer>{ProjectImages(currentProject)}</PictureOrganizer>
+          <PictureOrganizer id="pictureOrganizer">
+            {ProjectImages(currentProject)}
+          </PictureOrganizer>
         </ProjectInfoSection>
       </ProjectContainer>
     );

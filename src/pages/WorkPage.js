@@ -17,7 +17,7 @@ const WorkPage = ({ projects }) => {
     });
   };
 
-  return <WorkContainer>{workPreviews()}</WorkContainer>;
+  return <WorkContainer id="workContainer">{workPreviews()}</WorkContainer>;
 };
 
 export default WorkPage;
