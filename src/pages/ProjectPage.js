@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import styled from "styled-components";
 import allProjects from "../data/projects";
-import ImageModal from "./ImageModal";
+import ImageModal from "../components/ImageModal";
+import { COLORS } from "../constants";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -57,7 +58,9 @@ const ProjectPage = () => {
         <ProjectInfoSection>
           <ProjectTitle>{currentProject.title}</ProjectTitle>
           <ProjectDescription>{currentProject.description}</ProjectDescription>
-          <PictureOrganizer>{ProjectImages(currentProject)}</PictureOrganizer>
+          <PictureOrganizer id="pictureOrganizer">
+            {ProjectImages(currentProject)}
+          </PictureOrganizer>
         </ProjectInfoSection>
       </ProjectContainer>
     );
@@ -100,7 +103,7 @@ const ProjectPicture = styled.img`
 `;
 
 const ProjectInfoSection = styled.section`
-  background-color: white;
+  background-color: ${COLORS.white};
   height: 100%;
   width: 80%;
   padding: 5% 10%;

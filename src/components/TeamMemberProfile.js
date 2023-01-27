@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "../constants";
 
 const TeamMemberProfile = ({ name, role, bio, picture }) => {
   return (
@@ -25,14 +26,14 @@ const ProfilePicture = styled.img`
   width: 100%;
 `;
 
-const ProfileName = styled.h3`
+const ProfileName = styled.h2`
   font-size: 2em;
   margin: 10px 0px;
 `;
 
-const ProfileRole = styled.h4`
+const ProfileRole = styled.h3`
   font-size: 1.3rem;
-  color: lightgray;
+  color: ${COLORS.steelSiver};
   margin: 0;
 `;
 

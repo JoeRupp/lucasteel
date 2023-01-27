@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const ImageModal = ({ picture, handleModalPopUp }) => {
   return (
-    <Modal onClick={() => handleModalPopUp()}>
+    <Modal id="imageModal" onClick={() => handleModalPopUp()}>
       <Image src={require(`../assets/photos/${picture}`)} />
     </Modal>
   );

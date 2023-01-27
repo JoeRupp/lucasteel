@@ -1,16 +1,16 @@
 import React from "react";
-import NavBar from "./NavBar";
-import HomePage from "./HomePage";
-import AboutPage from "./AboutPage";
-import ContactPage from "./ContactPage";
-import WorkPage from "./WorkPage";
-import ProjectPage from "./ProjectPage";
+import NavBar from "./components/NavBar";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import WorkPage from "./pages/WorkPage";
+import ProjectPage from "./pages/ProjectPage";
 // import ShopPage from "./ShopPage";
-import NoMatch from "./NoMatch";
-import Footer from "./Footer";
+import NoMatch from "./pages/NoMatchPage";
+import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import allProjects from "../data/projects";
+import allProjects from "./data/projects";
 
 const App = () => {
   return (

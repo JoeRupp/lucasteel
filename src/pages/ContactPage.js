@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Button from "./Button";
+import Button from "../components/Button";
 import { useForm, ValidationError } from "@formspree/react";
+import { COLORS } from "../constants";
 
 const ContactPage = () => {
   const [state, handleSubmit] = useForm("mwkjkblv");
@@ -10,8 +11,9 @@ const ContactPage = () => {
     return (
       <ContactContainer>
         <ContactDetails>
-          <Header>Contact us for a quote:</Header>
+          <Header>CONTACT US FOR A QUOTE:</Header>
           <EmailInfo
+            id="emailLink"
             onClick={() =>
               (window.location = "mailto:lucasteelandfabrication@gmail.com")
             }
@@ -21,7 +23,7 @@ const ContactPage = () => {
           <Info>(720) 329-9769</Info>
           <Info>Wheat Ridge, CO 80033</Info>
         </ContactDetails>
-        <FormCompletionMessage>
+        <FormCompletionMessage id="formCompletionMessage">
           <Header>Form Submitted - Thank you!</Header>
           <Info>We'll get back to you as soon as we can.</Info>
         </FormCompletionMessage>
@@ -32,8 +34,9 @@ const ContactPage = () => {
   return (
     <ContactContainer>
       <ContactDetails>
-        <Header>Contact us for a quote:</Header>
+        <Header>CONTACT US FOR A QUOTE:</Header>
         <EmailInfo
+          id="emailLink"
           onClick={() =>
             (window.location = "mailto:lucasteelandfabrication@gmail.com")
           }
@@ -148,7 +151,7 @@ const Info = styled.h2`
 
 const EmailInfo = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: ${COLORS.black};
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1px;

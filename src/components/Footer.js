@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import fbIcon from "../assets/logos/social_icons/fbIcon.png";
 import instaIcon from "../assets/logos/social_icons/InstaIcon.png";
+import { COLORS } from "../constants";
 
 const Footer = () => {
   return (
@@ -22,11 +23,13 @@ const Footer = () => {
       </FooterDirectory>
       <SocialContainer>
         <FacebookIcon
+          id="facebookIcon"
           href="https://www.facebook.com/LucaSteelandFabrication/"
           target="_blank"
           rel="noopener noreferrer"
         />
         <InstagramIcon
+          id="instagramIcon"
           href="https://www.instagram.com/lucas_steel_/"
           target="_blank"
           rel="noopener noreferrer"
@@ -42,7 +45,7 @@ const Footer = () => {
 export default Footer;
 
 const StyledFooter = styled.footer`
-  background-color: white;
+  background-color: ${COLORS.white};
   padding: 8% 10% 2% 10%;
   height: 150px;
   width: 80%;
@@ -59,7 +62,7 @@ const FooterDirectory = styled.div`
 
 const NavigationLink = styled(NavLink)`
   cursor: pointer;
-  color: black;
+  color: ${COLORS.black};
   font-size: 1.1rem;
   text-decoration: none;
   &:hover {
@@ -69,7 +72,7 @@ const NavigationLink = styled(NavLink)`
 
 const ExternalLink = styled.a`
   cursor: pointer;
-  color: black;
+  color: ${COLORS.black};
   font-size: 1.1rem;
   text-decoration: none;
   &:hover {

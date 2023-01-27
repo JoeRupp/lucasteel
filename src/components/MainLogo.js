@@ -1,10 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { COLORS } from "../constants";
 
 const MainLogo = () => {
   return (
-    <NavigationLink to="/">
+    <NavigationLink id="lucaSteelLogo" to="/">
       <SVG
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -58,14 +59,13 @@ const SVG = styled.svg`
 `;
 
 const Polygon = styled.polygon`
-  fill: white;
+  fill: ${COLORS.white};
 `;
 
 const Path = styled.path`
-  fill: white;
+  fill: ${COLORS.white};
 `;
 
 const NavigationLink = styled(NavLink)`
-  color: white;
   text-decoration: none;
 `;

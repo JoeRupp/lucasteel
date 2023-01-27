@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import WorkPreviewSection from "./WorkPreviewSection";
+import WorkPreviewSection from "../components/WorkPreviewSection";
 
 const WorkPage = ({ projects }) => {
   const workPreviews = () => {
@@ -17,7 +17,7 @@ const WorkPage = ({ projects }) => {
     });
   };
 
-  return <WorkContainer>{workPreviews()}</WorkContainer>;
+  return <WorkContainer id="workContainer">{workPreviews()}</WorkContainer>;
 };
 
 export default WorkPage;

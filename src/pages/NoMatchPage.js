@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "../constants";
 
 const NoMatch = () => {
   return (
@@ -34,12 +35,12 @@ const NoMatchSection = styled.section`
 
 const Header = styled.h1`
   font-size: 3rem;
-  color: white;
+  color: ${COLORS.white};
 `;
 
 const Message = styled.p`
   font-size: 1.2rem;
-  color: white;
+  color: ${COLORS.white};
 `;
 
 const HeroImage = styled.img`

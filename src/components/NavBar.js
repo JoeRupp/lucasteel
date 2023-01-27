@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import MainLogo from "./MainLogo";
 import styled from "styled-components";
+import { COLORS } from "../constants";
 
 const NavBar = () => {
   const [navStyle, setNavStyle] = useState(false);
@@ -39,7 +40,7 @@ export default NavBar;
 
 const Nav = styled.nav`
   background-color: ${(props) =>
-    props.navStyle ? "black" : "rgba(0, 0, 0, 0.5)"};
+    props.navStyle ? COLORS.black : "rgba(0, 0, 0, 0.5)"};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +59,7 @@ const LinkContainer = styled.div`
 `;
 
 const NavigationLink = styled(NavLink)`
-  color: white;
+  color: ${COLORS.white};
   font-size: 1.5rem;
   text-decoration: none;
   background-color: transparent;
@@ -67,7 +68,7 @@ const NavigationLink = styled(NavLink)`
   display: inline-block;
   position: relative;
   &:after {
-    background-color: white;
+    background-color: ${COLORS.white};
     bottom: 0;
     content: "";
     height: 2px;
@@ -85,7 +86,7 @@ const NavigationLink = styled(NavLink)`
   &.active:after {
     position: relative;
     display: inline-block;
-    background-color: white;
+    background-color: ${COLORS.white};
     bottom: 0;
     content: "";
     height: 2px;
@@ -97,7 +98,7 @@ const NavigationLink = styled(NavLink)`
 `;
 
 const ExternalLink = styled.a`
-  color: white;
+  color: ${COLORS.white};
   font-size: 1.5rem;
   text-decoration: none;
   background-color: transparent;
@@ -106,7 +107,7 @@ const ExternalLink = styled.a`
   display: inline-block;
   position: relative;
   &:after {
-    background-color: white;
+    background-color: ${COLORS.white};
     bottom: 0;
     content: "";
     height: 2px;
@@ -124,7 +125,7 @@ const ExternalLink = styled.a`
   &.active:after {
     position: relative;
     display: inline-block;
-    background-color: white;
+    background-color: ${COLORS.white};
     bottom: 0;
     content: "";
     height: 2px;

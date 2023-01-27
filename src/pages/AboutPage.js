@@ -1,13 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import TeamMemberProfile from "./TeamMemberProfile";
+import TeamMemberProfile from "../components/TeamMemberProfile";
+import { COLORS } from "../constants";
 
 const AboutPage = () => {
   return (
     <AboutContainer>
-      <HeroImage src={require("../assets/photos/sparkBanner.jpeg")} />
+      <HeroImage
+        id="aboutPageHeroImage"
+        src={require("../assets/photos/sparkBanner.jpeg")}
+      />
       <GeneralAboutSection>
-        <SubHeader>About Us:</SubHeader>
+        <SubHeader>ABOUT US:</SubHeader>
         <AboutText>
           LucaSteel and Fabrication is a welding shop based out of Denver,
           Colorado. We started the shop with the goal to create one-of-a-kind
@@ -24,19 +28,13 @@ const AboutPage = () => {
         </AboutText>
       </GeneralAboutSection>
       <TeamSection>
-        <SubHeaderTwo>Meet the Team:</SubHeaderTwo>
-        <TeamProfileOrganizer>
+        <SubHeaderTwo>MEET THE TEAM:</SubHeaderTwo>
+        <TeamProfileOrganizer id="teamProfileOrganizer">
           <TeamMemberProfile
             name="Lucas Onorato"
             role="Owner/Founder"
             bio="If you can dream it we can build it.” With five years of experience welding and fabricating, Lucas has turned his hobby into a business where anything can be made. With a background of working with talented local artists, Lucas quickly excelled in welding sculptures and decorative furnishings. With a passion for creativity and an eye for detail, Lucas can find the solutions clients need while fitting a unique artistic design."
             picture="LucasProfile.png"
-          />
-          <TeamMemberProfile
-            name="Zachary Miner"
-            role="Shop Manager/CAD Engineer"
-            bio="Graduating from Colorado School of Mines with a degree in Mechanical Engineering, Zachary uses his engineering experience and forward-thinking design to create the 3D CAD design. He then uses his welding skills to bring these ideas to life. "
-            picture="ZachProfile.png"
           />
           <TeamMemberProfile
             name="Hanna Rupp"
@@ -76,32 +74,32 @@ const HeroImage = styled.img`
   z-index: -1;
 `;
 
-const SubHeader = styled.h2`
+const SubHeader = styled.h1`
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
-  color: white;
+  color: ${COLORS.white};
 `;
 
-const SubHeaderTwo = styled.h2`
+const SubHeaderTwo = styled.h1`
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
-  color: black;
+  color: ${COLORS.black};
 `;
 
 const AboutText = styled.p`
-  color: white;
+  color: ${COLORS.white};
   font-size: 1.2rem;
 `;
 
 const TeamProfileOrganizer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
-  gap: 3rem;
+  gap: 5rem;
 `;
 
 const TeamSection = styled.section`
-  background-color: white;
+  background-color: ${COLORS.white};
   height: 100%;
   width: 80%;
   padding: 5% 10%;

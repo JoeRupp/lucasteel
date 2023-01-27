@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { COLORS } from "../constants";
 
 const WorkPreviewSection = ({ title, description, bannerImage, id }) => {
   return (
@@ -31,7 +32,7 @@ const InfoContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  color: white;
+  color: ${COLORS.white};
   font-size: 2.5rem;
   margin-bottom: 0;
   z-index: 1;
@@ -39,13 +40,13 @@ const Title = styled.h1`
 
 const LineBreak = styled.div`
   width: 90%;
-  background-color: white;
+  background-color: ${COLORS.white};
   height: 1px;
 `;
 
 const Description = styled.p`
   width: 90%;
-  color: white;
+  color: ${COLORS.white};
   z-index: 1;
 `;
 
