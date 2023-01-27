@@ -11,8 +11,9 @@ const ContactPage = () => {
     return (
       <ContactContainer>
         <ContactDetails>
-          <Header>Contact us for a quote:</Header>
+          <Header>CONTACT US FOR A QUOTE:</Header>
           <EmailInfo
+            id="emailLink"
             onClick={() =>
               (window.location = "mailto:lucasteelandfabrication@gmail.com")
             }
@@ -22,7 +23,7 @@ const ContactPage = () => {
           <Info>(720) 329-9769</Info>
           <Info>Wheat Ridge, CO 80033</Info>
         </ContactDetails>
-        <FormCompletionMessage>
+        <FormCompletionMessage id="formCompletionMessage">
           <Header>Form Submitted - Thank you!</Header>
           <Info>We'll get back to you as soon as we can.</Info>
         </FormCompletionMessage>
@@ -33,8 +34,9 @@ const ContactPage = () => {
   return (
     <ContactContainer>
       <ContactDetails>
-        <Header>Contact us for a quote:</Header>
+        <Header>CONTACT US FOR A QUOTE:</Header>
         <EmailInfo
+          id="emailLink"
           onClick={() =>
             (window.location = "mailto:lucasteelandfabrication@gmail.com")
           }
