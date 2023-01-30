@@ -3,9 +3,10 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
-const MobileNav = () => {
+const MobileNav = ({ openMobileNav }) => {
   return (
-    <MobileNavContainer>
+    <MobileNavContainer openMobileNav={openMobileNav}>
+      <NavigationLink to="/">Home</NavigationLink>
       <NavigationLink to="/work">Work</NavigationLink>
       <ExternalLink
         href="https://www.etsy.com/shop/LucaSteel?listing_id=1170224592&ref=simple-shop-header-name"
@@ -33,7 +34,13 @@ const MobileNavContainer = styled.nav`
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
-  width: 100%;
+  width: 85%;
+  transform: ${({ openMobileNav }) =>
+    openMobileNav ? "translateX(0)" : "translateX(100%)"};
+
+  @media (min-width: 800px) {
+    display: none;
+  }
 `;
 
 const NavigationLink = styled(NavLink)`
@@ -52,7 +59,7 @@ const NavigationLink = styled(NavLink)`
     background-color: ${COLORS.black};
     bottom: 0;
     content: "";
-    height: 2px;
+    height: 3px;
     left: 0;
     position: absolute;
     transform: scaleX(0);
@@ -66,7 +73,7 @@ const NavigationLink = styled(NavLink)`
     background-color: ${COLORS.black};
     bottom: 0;
     content: "";
-    height: 2px;
+    height: 3px;
     left: 0;
     position: absolute;
     transform: scaleX(1);
@@ -90,7 +97,7 @@ const ExternalLink = styled.a`
     background-color: ${COLORS.black};
     bottom: 0;
     content: "";
-    height: 2px;
+    height: 3px;
     left: 0;
     position: absolute;
     transform: scaleX(0);
@@ -104,7 +111,7 @@ const ExternalLink = styled.a`
     background-color: ${COLORS.black};
     bottom: 0;
     content: "";
-    height: 2px;
+    height: 3px;
     left: 0;
     position: absolute;
     transform: scaleX(1);
