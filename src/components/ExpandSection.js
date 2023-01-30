@@ -20,6 +20,10 @@ const Title = styled.h3`
   font-size: 1.5rem;
   margin: 3em 1em 0em 1em;
   transition: all 0.35s;
+  @media (max-width: 800px) {
+    transition: none;
+    margin: 1em 1em 0em 1em;
+  }
 `;
 
 const LineBreak = styled.div`
@@ -28,6 +32,9 @@ const LineBreak = styled.div`
   height: 1.5px;
   margin: 0em 1em;
   transition: all 0.35s;
+  @media (max-width: 800px) {
+    transition: none;
+  }
 `;
 
 const Description = styled.p`
@@ -42,6 +49,9 @@ const Image = styled.img`
   height: 0px;
   object-fit: cover;
   transition: all 0.35s;
+  @media (max-width: 800px) {
+    height: 100px;
+  }
 `;
 
 const Container = styled.div`
@@ -50,13 +60,24 @@ const Container = styled.div`
   height: 250px;
   &:hover ${LineBreak} {
     transition: all 0.35s;
+    @media (max-width: 800px) {
+      transition: none;
+    }
   }
   &:hover ${Image} {
     transition: all 0.35s;
     height: 180px;
+    @media (max-width: 800px) {
+      transition: none;
+      height: 100px;
+    }
   }
   &:hover ${Title} {
     transition: all 0.35s;
     margin: 1em 1em 0em 1em;
+    @media (max-width: 800px) {
+      transition: none;
+      margin: 1em 1em 0em 1em;
+    }
   }
 `;

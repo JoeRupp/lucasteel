@@ -6,7 +6,9 @@ import { COLORS } from "../constants";
 const MobileNav = ({ openMobileNav }) => {
   return (
     <MobileNavContainer openMobileNav={openMobileNav}>
-      <NavigationLink to="/">Home</NavigationLink>
+      <NavigationLink to="/" end>
+        Home
+      </NavigationLink>
       <NavigationLink to="/work">Work</NavigationLink>
       <ExternalLink
         href="https://www.etsy.com/shop/LucaSteel?listing_id=1170224592&ref=simple-shop-header-name"
