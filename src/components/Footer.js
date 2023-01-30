@@ -53,11 +53,21 @@ const StyledFooter = styled.footer`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1em;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-bottom: 18%;
+    gap: 1.5em;
+  }
 `;
 
 const FooterDirectory = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
 `;
 
 const NavigationLink = styled(NavLink)`
@@ -84,6 +94,9 @@ const SocialContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   gap: 2em;
+  @media (max-width: 800px) {
+    justify-content: flex-start;
+  }
 `;
 
 const InstagramIcon = styled.a`
