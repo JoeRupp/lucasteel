@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import MainLogo from "./MainLogo";
 import styled from "styled-components";
 import { COLORS } from "../constants";
+import HamburgerNav from "./HamburgerNav";
+import MobileNav from "./MobileNav";
 
 const NavBar = () => {
   const [navStyle, setNavStyle] = useState(false);
@@ -20,6 +22,8 @@ const NavBar = () => {
   return (
     <Nav navStyle={navStyle}>
       <MainLogo />
+      <HamburgerNav />
+      <MobileNav />
       <LinkContainer>
         <NavigationLink to="/work">Work</NavigationLink>
         <ExternalLink
@@ -56,6 +60,12 @@ const LinkContainer = styled.div`
   display: flex;
   width: 30%;
   justify-content: space-between;
+  @media (max-width: 1080px) {
+    width: 50%;
+  }
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const NavigationLink = styled(NavLink)`
