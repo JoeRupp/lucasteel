@@ -11,11 +11,13 @@ import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import allProjects from "./data/projects";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <Main>
       <NavBar />
+      <ScrollToTop />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route
