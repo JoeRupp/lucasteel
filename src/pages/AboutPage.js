@@ -72,6 +72,9 @@ const HeroImage = styled.img`
   object-fit: cover;
   position: fixed;
   z-index: -1;
+  @media (max-width: 1080px) {
+    height: 100vh;
+  }
 `;
 
 const SubHeader = styled.h1`
@@ -96,6 +99,9 @@ const TeamProfileOrganizer = styled.div`
   grid-template-columns: 1fr 1fr;
   width: 100%;
   gap: 5rem;
+  @media (max-width: 1080px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const TeamSection = styled.section`

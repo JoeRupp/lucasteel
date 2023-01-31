@@ -79,6 +79,9 @@ const HeroImage = styled.img`
   width: 100%;
   height: 110vh;
   object-fit: cover;
+  @media (max-width: 1080px) {
+    height: 100vh;
+  }
 `;
 
 const ProjectTitle = styled.h1`
@@ -94,6 +97,12 @@ const PictureOrganizer = styled.div`
   align-items: center;
   gap: 2em;
   grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: 1080px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ProjectPicture = styled.img`

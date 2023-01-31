@@ -71,6 +71,9 @@ const HeroImage = styled.img`
   width: 100%;
   height: 110vh;
   object-fit: cover;
+  @media (max-width: 1080px) {
+    height: 100vh;
+  }
 `;
 
 const ServicesSection = styled.section`
@@ -86,11 +89,15 @@ const Header = styled.h1`
 `;
 
 const ExpandableOrganizer = styled.div`
-  margin: 5% 0%;
+  margin: 5% 0% 8% 0%;
   display: grid;
   justify-items: center;
   align-items: center;
   gap: 2em;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 `;

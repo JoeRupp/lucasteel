@@ -28,4 +28,10 @@ const Modal = styled.div`
 const Image = styled.img`
   width: auto;
   height: 85%;
+  @media (max-width: 1100px) {
+    height: 70%;
+  }
+  @media (max-width: 800px) {
+    height: 60%;
+  }
 `;

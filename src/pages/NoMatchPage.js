@@ -27,10 +27,13 @@ const NoMatchContainer = styled.section`
 
 const NoMatchSection = styled.section`
   width: 100vw;
-  height: 50vh;
+  height: 80vh;
   margin-top: 10%;
   width: 80%;
-  padding: 5% 10%;
+  padding: 10%;
+  @media (max-width: 800px) {
+    padding: 25% 10%;
+  }
 `;
 
 const Header = styled.h1`

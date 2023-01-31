@@ -101,7 +101,7 @@ const ContactPage = () => {
             name="message"
             type="text"
             rows="5"
-            cols="65"
+            // cols="65"
             placeholder="Tell us a little about what you are looking for here."
           />
         </FormFieldMessage>
@@ -116,27 +116,44 @@ export default ContactPage;
 
 const ContactContainer = styled.section`
   width: 100vw;
-  margin-top: 10%;
+  margin-top: 12%;
   width: 80%;
   padding: 5% 10%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media (max-width: 900px) {
+    margin-top: 20%;
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  @media (max-width: 560px) {
+    margin-top: 30%;
+  }
+  @media (max-width: 400px) {
+    margin-top: 35%;
+  }
 `;
 
 const ContactForm = styled.form``;
 
 const FormOrganizer = styled.div`
   display: flex;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const FormField = styled.div`
   margin: 25px 5% 0 0;
   width: 45%;
+  @media (max-width: 600px) {
+    width: 95%;
+  }
 `;
 
 const FormFieldMessage = styled.div`
   margin: 25px 5% 25px 0;
-  width: 95%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 `;

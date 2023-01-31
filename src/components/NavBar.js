@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import MainLogo from "./MainLogo";
 import styled from "styled-components";
 import { COLORS } from "../constants";
+import HamburgerNav from "./HamburgerNav";
+import MobileNav from "./MobileNav";
+import { useClickOutside } from "../hooks/useClickOutside";
 
 const NavBar = () => {
+  const node = useRef();
+
   const [navStyle, setNavStyle] = useState(false);
+  const [openMobileNav, setOpenMobileNav] = useState(false);
+
+  useClickOutside(node, () => setOpenMobileNav(false));
 
   const changeNavStyle = () => {
     if (window.scrollY >= 100) {
@@ -20,6 +28,13 @@ const NavBar = () => {
   return (
     <Nav navStyle={navStyle}>
       <MainLogo />
+      <MobileNavContainer ref={node}>
+        <HamburgerNav
+          openMobileNav={openMobileNav}
+          setOpenMobileNav={setOpenMobileNav}
+        />
+        <MobileNav openMobileNav={openMobileNav} />
+      </MobileNavContainer>
       <LinkContainer>
         <NavigationLink to="/work">Work</NavigationLink>
         <ExternalLink
@@ -52,10 +67,18 @@ const Nav = styled.nav`
   z-index: 99;
 `;
 
+const MobileNavContainer = styled.div``;
+
 const LinkContainer = styled.div`
   display: flex;
   width: 30%;
   justify-content: space-between;
+  @media (max-width: 1080px) {
+    width: 50%;
+  }
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const NavigationLink = styled(NavLink)`
