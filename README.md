@@ -1,3 +1,5 @@
+![LucaSteelBanner](https://user-images.githubusercontent.com/96392562/215675526-51b04dac-d0a8-4bfd-b8fb-5c9c98307da3.png)
+
 # LucaSteel Welding & Fabrication Website
 
 ## Overview:
@@ -9,7 +11,7 @@ This is the repository for LucaSteel, a welding and fabrication business located
 ## Future Updates:
 
 - Update with new, professional images
-- Once new photos are added, revise accessability sitewide to make sure it scores 100% on Lighthouse
+- Once new photos are added, revise accessibility sitewide to make sure it scores 100% on Lighthouse
 
 ## Technologies:
 
