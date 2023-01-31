@@ -89,7 +89,7 @@ const Header = styled.h1`
 `;
 
 const ExpandableOrganizer = styled.div`
-  margin: 5% 0%;
+  margin: 5% 0% 8% 0%;
   display: grid;
   justify-items: center;
   align-items: center;

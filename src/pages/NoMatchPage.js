@@ -31,6 +31,10 @@ const NoMatchSection = styled.section`
   margin-top: 10%;
   width: 80%;
   padding: 5% 10%;
+  @media (max-width: 800px) {
+    height: 80vh;
+    padding: 25% 10%;
+  }
 `;
 
 const Header = styled.h1`
