@@ -6,7 +6,7 @@
 
 This is the repository for LucaSteel, a welding and fabrication business located in Denver, Colorado. The site's main purpose is to showcase work and projects done by Lucas Onorato, the founder and owner of LucaSteel. From this website visitors can view what services LucaSteel offers, learn more about the business, get contact info or send an email directly by completing a form, find the business's social pages, or be directed to LucaSteel's Etsy shop to purchase premade items.
 
-[Deployed Site at www.lucasteelandfabrication.com](www.lucasteelandfabrication.com)
+[Deployed Site at lucasteelandfabrication.com](https://lucasteelandfabrication.com/)
 
 ## Future Updates:
 
