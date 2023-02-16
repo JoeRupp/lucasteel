@@ -1,8 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 import TeamMemberProfile from "../components/TeamMemberProfile";
 import { COLORS } from "../constants";
 
-const AboutPage = () => {
+const AboutPage: React.FC = () => {
   return (
     <AboutContainer>
       <HeroImage

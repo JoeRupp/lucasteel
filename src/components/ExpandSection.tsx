@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
@@ -7,7 +8,7 @@ type Props = {
   image: string;
 };
 
-const ExpandSection = ({ title, description, image }: Props) => {
+const ExpandSection: React.FC<Props> = ({ title, description, image }) => {
   return (
     <Container>
       <Title>{title}</Title>

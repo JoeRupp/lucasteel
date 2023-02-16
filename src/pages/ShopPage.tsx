@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ShopPage = () => {
+const ShopPage: React.FC = () => {
   return (
     <section>
       <h1>Shop</h1>

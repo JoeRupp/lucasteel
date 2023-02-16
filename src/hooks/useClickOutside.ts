@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 export const useClickOutside = (ref: {current: any}, handler: React.Dispatch<React.SetStateAction<boolean>>) => {
   useEffect(() => {

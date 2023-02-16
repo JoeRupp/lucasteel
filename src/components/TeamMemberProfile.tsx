@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
@@ -8,7 +9,7 @@ type Props = {
   picture: string;
 };
 
-const TeamMemberProfile = ({ name, role, bio, picture }: Props) => {
+const TeamMemberProfile: React.FC<Props> = ({ name, role, bio, picture }) => {
   return (
     <ProfileContainer>
       <ProfilePicture src={require(`../assets/photos/profiles/${picture}`)} />

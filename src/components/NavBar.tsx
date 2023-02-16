@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import MainLogo from "./MainLogo";
 import styled from "styled-components";
@@ -11,7 +11,7 @@ interface NavStylingProps {
   navStyle: boolean;
 }
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   const node = useRef<HTMLDivElement>(null);
 
   const [navStyle, setNavStyle] = useState<boolean>(false);

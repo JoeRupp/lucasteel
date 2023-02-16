@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
-const NoMatch = () => {
+const NoMatch: React.FC = () => {
   return (
     <NoMatchContainer>
       <HeroImage

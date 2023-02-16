@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
@@ -7,7 +8,7 @@ type Props = {
   disabled: boolean;
 };
 
-const Button = ({ name, action, disabled }: Props) => {
+const Button: React.FC<Props> = ({ name, action, disabled }) => {
   return (
     <StyledBtn onClick={action} disabled={disabled}>
       {name}

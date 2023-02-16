@@ -4,7 +4,7 @@ import LinkButton from "../components/LinkButton";
 import ExpandSection from "../components/ExpandSection";
 import { COLORS } from "../constants";
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <HomeContainer>
       <HeroImage

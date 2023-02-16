@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { COLORS } from "../constants";
@@ -9,7 +10,12 @@ type Props = {
   id: number;
 };
 
-const WorkPreviewSection = ({ title, description, bannerImage, id }: Props) => {
+const WorkPreviewSection: React.FC<Props> = ({
+  title,
+  description,
+  bannerImage,
+  id,
+}) => {
   return (
     <WorkContainer to={`/project/${id}`}>
       <Image src={require(`../assets/photos/${bannerImage}`)} />

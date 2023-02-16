@@ -1,10 +1,11 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import fbIcon from "../assets/logos/social_icons/fbIcon.png";
 import instaIcon from "../assets/logos/social_icons/InstaIcon.png";
 import { COLORS } from "../constants";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <StyledFooter>
       <FooterDirectory>

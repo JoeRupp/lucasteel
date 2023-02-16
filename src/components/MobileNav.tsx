@@ -1,3 +1,4 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { COLORS } from "../constants";
@@ -10,7 +11,7 @@ interface MobileNavProps {
   openMobileNav: boolean;
 }
 
-const MobileNav = ({ openMobileNav }: Props) => {
+const MobileNav: React.FC<Props> = ({ openMobileNav }) => {
   return (
     <MobileNavContainer openMobileNav={openMobileNav}>
       <NavigationLink to="/" end>

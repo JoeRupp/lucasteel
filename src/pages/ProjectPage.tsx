@@ -13,7 +13,7 @@ type Project = {
   images: string[];
 };
 
-const ProjectPage = () => {
+const ProjectPage: React.FC = () => {
   const { id } = useParams<string>();
 
   const [modalStatus, setModalStatus] = useState<boolean>(false);

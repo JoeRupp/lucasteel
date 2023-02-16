@@ -14,7 +14,7 @@ type Props = {
   projects: Project[];
 };
 
-const WorkPage = ({ projects }: Props) => {
+const WorkPage: React.FC<Props> = ({ projects }) => {
   const workPreviews = () => {
     return projects.map((project) => {
       return (

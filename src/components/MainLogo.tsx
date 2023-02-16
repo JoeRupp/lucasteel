@@ -1,8 +1,9 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
-const MainLogo = () => {
+const MainLogo: React.FC = () => {
   return (
     <NavigationLink id="lucaSteelLogo" to="/">
       <SVG

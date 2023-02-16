@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 type Props = {
@@ -5,7 +6,7 @@ type Props = {
   handleModalPopUp: (pic: string) => void;
 };
 
-const ImageModal = ({ picture, handleModalPopUp }: Props) => {
+const ImageModal: React.FC<Props> = ({ picture, handleModalPopUp }) => {
   return (
     <Modal id="imageModal" onClick={() => handleModalPopUp(picture)}>
       <Image src={require(`../assets/photos/${picture}`)} />

@@ -1,9 +1,10 @@
+import React from "react";
 import styled from "styled-components";
 import Button from "../components/Button";
 import { useForm, ValidationError } from "@formspree/react";
 import { COLORS } from "../constants";
 
-const ContactPage = () => {
+const ContactPage: React.FC = () => {
   const [state, handleSubmit] = useForm("mwkjkblv");
   if (state.succeeded) {
     return (
