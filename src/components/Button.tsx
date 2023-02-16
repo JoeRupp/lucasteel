@@ -3,7 +3,7 @@ import { COLORS } from "../constants";
 
 type Props = {
   name: string;
-  action: () => any;
+  action?: () => any;
   disabled: boolean;
 };
 

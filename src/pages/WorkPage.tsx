@@ -2,7 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import WorkPreviewSection from "../components/WorkPreviewSection";
 
-const WorkPage = ({ projects }) => {
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  bannerImage: string;
+  images: string[];
+};
+
+type Props = {
+  projects: Project[];
+};
+
+const WorkPage = ({ projects }: Props) => {
   const workPreviews = () => {
     return projects.map((project) => {
       return (

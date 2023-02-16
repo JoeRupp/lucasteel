@@ -5,22 +5,30 @@ import allProjects from "../data/projects";
 import ImageModal from "../components/ImageModal";
 import { COLORS } from "../constants";
 
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  bannerImage: string;
+  images: string[];
+};
+
 const ProjectPage = () => {
-  const { id } = useParams();
+  const { id } = useParams<string>();
 
-  const [modalStatus, setModalStatus] = useState(false);
-  const [currentModalPicture, setCurrentModalPicture] = useState(null);
+  const [modalStatus, setModalStatus] = useState<boolean>(false);
+  const [currentModalPicture, setCurrentModalPicture] = useState<string>("");
 
-  const findProject = (id) => {
+  const findProject = (id: string | undefined): Project | undefined => {
     return allProjects.find((project) => {
       return project.id === Number(id);
     });
   };
 
-  const handleModalPopUp = (pic) => {
+  const handleModalPopUp = (pic: string): void => {
     if (modalStatus) {
       setModalStatus(false);
-      setCurrentModalPicture(null);
+      setCurrentModalPicture("");
     } else {
       setModalStatus(true);
       setCurrentModalPicture(pic);
@@ -29,7 +37,7 @@ const ProjectPage = () => {
 
   const currentProject = findProject(id);
 
-  const ProjectImages = (proj) => {
+  const ProjectImages = (proj: Project) => {
     return proj.images.map((pic) => {
       return (
         <ProjectPicture

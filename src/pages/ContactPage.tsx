@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../components/Button";
 import { useForm, ValidationError } from "@formspree/react";
@@ -15,7 +14,8 @@ const ContactPage = () => {
           <EmailInfo
             id="emailLink"
             onClick={() =>
-              (window.location = "mailto:lucasteelandfabrication@gmail.com")
+              (window.location.href =
+                "mailto:lucasteelandfabrication@gmail.com")
             }
           >
             lucasteelandfabrication@gmail.com
@@ -38,7 +38,7 @@ const ContactPage = () => {
         <EmailInfo
           id="emailLink"
           onClick={() =>
-            (window.location = "mailto:lucasteelandfabrication@gmail.com")
+            (window.location.href = "mailto:lucasteelandfabrication@gmail.com")
           }
         >
           lucasteelandfabrication@gmail.com
@@ -99,9 +99,6 @@ const ContactPage = () => {
           <MessageArea
             id="message"
             name="message"
-            type="text"
-            rows="5"
-            // cols="65"
             placeholder="Tell us a little about what you are looking for here."
           />
         </FormFieldMessage>
@@ -166,8 +163,9 @@ const Info = styled.h2`
   letter-spacing: 1px;
 `;
 
-const EmailInfo = styled(Link)`
+const EmailInfo = styled.a`
   text-decoration: none;
+  cursor: pointer;
   color: ${COLORS.black};
   font-size: 1.5rem;
   font-weight: bold;
@@ -189,6 +187,9 @@ const Label = styled.label`
   font-size: 1.2rem;
 `;
 
-const MessageArea = styled.textarea``;
+const MessageArea = styled.textarea`
+  height: 5rem;
+  width: 100%;
+`;
 
 const FormCompletionMessage = styled.div``;

@@ -4,7 +4,7 @@ import { COLORS } from "../constants";
 
 type Props = {
   name: string;
-  action: () => any;
+  action?: () => any;
   link: string;
 };
 

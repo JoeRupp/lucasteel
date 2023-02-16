@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 type Props = {
   picture: string;
-  handleModalPopUp: () => undefined;
+  handleModalPopUp: (pic: string) => void;
 };
 
 const ImageModal = ({ picture, handleModalPopUp }: Props) => {
   return (
-    <Modal id="imageModal" onClick={() => handleModalPopUp()}>
+    <Modal id="imageModal" onClick={() => handleModalPopUp(picture)}>
       <Image src={require(`../assets/photos/${picture}`)} />
     </Modal>
   );
