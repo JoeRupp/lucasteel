@@ -19,17 +19,13 @@ const App = () => {
       <NavBar />
       <ScrollToTop />
       <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route
-          exact
-          path="/work"
-          element={<WorkPage projects={allProjects} />}
-        />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/work" element={<WorkPage projects={allProjects} />} />
         <Route path="/project/:id" element={<ProjectPage />} />
-        {/* <Route exact path="/shop" element={<ShopPage />} /> */}
-        <Route exact path="/about" element={<AboutPage />} />
-        <Route exact path="/contact" element={<ContactPage />} />
-        <Route exact path="*" element={<NoMatch />} />
+        {/* <Route path="/shop" element={<ShopPage />} /> */}
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<NoMatch />} />
       </Routes>
       <Footer />
     </Main>

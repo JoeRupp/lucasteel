@@ -11,7 +11,7 @@ interface MobileNavProps {
   openMobileNav: boolean;
 }
 
-const HamburgerNav = ({ openMobileNav, setOpenMobileNav }: Props) => {
+const HamburgerNav: React.FC<Props> = ({ openMobileNav, setOpenMobileNav }) => {
   return (
     <HamburgerIcon
       openMobileNav={openMobileNav}
