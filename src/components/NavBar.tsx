@@ -19,7 +19,7 @@ const NavBar = () => {
 
   useClickOutside(node, () => setOpenMobileNav(false));
 
-  const changeNavStyle = () => {
+  const changeNavStyle = (): void => {
     if (window.scrollY >= 100) {
       setNavStyle(true);
     } else {

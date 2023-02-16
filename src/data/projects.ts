@@ -1,4 +1,12 @@
-const allProjects = [
+type Project = {
+  id: number,
+  title: string,
+  description: string,
+  bannerImage: string,
+  images: string[]
+}
+
+const allProjects: Project[] = [
   {
     id: 1,
     title: "Specialty and Custom Furniture",
