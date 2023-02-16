@@ -1,3 +1,5 @@
+// Run cypress tests using `npx cypress open` from the terminal
+
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({

@@ -2,7 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
-const HamburgerNav = ({ openMobileNav, setOpenMobileNav }) => {
+type Props = {
+  openMobileNav: boolean;
+  setOpenMobileNav: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+interface MobileNavProps {
+  openMobileNav: boolean;
+}
+
+const HamburgerNav = ({ openMobileNav, setOpenMobileNav }: Props) => {
   return (
     <HamburgerIcon
       openMobileNav={openMobileNav}
@@ -17,7 +26,7 @@ const HamburgerNav = ({ openMobileNav, setOpenMobileNav }) => {
 
 export default HamburgerNav;
 
-const HamburgerIcon = styled.button`
+const HamburgerIcon = styled.button<MobileNavProps>`
   position: relative;
   display: flex;
   flex-direction: column;

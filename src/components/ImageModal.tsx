@@ -1,7 +1,11 @@
-import React from "react";
 import styled from "styled-components";
 
-const ImageModal = ({ picture, handleModalPopUp }) => {
+type Props = {
+  picture: string;
+  handleModalPopUp: () => undefined;
+};
+
+const ImageModal = ({ picture, handleModalPopUp }: Props) => {
   return (
     <Modal id="imageModal" onClick={() => handleModalPopUp()}>
       <Image src={require(`../assets/photos/${picture}`)} />

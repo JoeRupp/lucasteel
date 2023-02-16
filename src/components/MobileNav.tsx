@@ -1,9 +1,16 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
-const MobileNav = ({ openMobileNav }) => {
+type Props = {
+  openMobileNav: boolean;
+};
+
+interface MobileNavProps {
+  openMobileNav: boolean;
+}
+
+const MobileNav = ({ openMobileNav }: Props) => {
   return (
     <MobileNavContainer openMobileNav={openMobileNav}>
       <NavigationLink to="/" end>
@@ -25,7 +32,7 @@ const MobileNav = ({ openMobileNav }) => {
 
 export default MobileNav;
 
-const MobileNavContainer = styled.nav`
+const MobileNavContainer = styled.nav<MobileNavProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,10 +1,15 @@
-import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
-const Button = ({ name, action, type, disabled }) => {
+type Props = {
+  name: string;
+  action: () => any;
+  disabled: boolean;
+};
+
+const Button = ({ name, action, disabled }: Props) => {
   return (
-    <StyledBtn onClick={action} type={type} disabled={disabled}>
+    <StyledBtn onClick={action} disabled={disabled}>
       {name}
     </StyledBtn>
   );

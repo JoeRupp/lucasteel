@@ -1,9 +1,15 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
-const WorkPreviewSection = ({ title, description, bannerImage, id }) => {
+type Props = {
+  title: string;
+  description: string;
+  bannerImage: string;
+  id: number;
+};
+
+const WorkPreviewSection = ({ title, description, bannerImage, id }: Props) => {
   return (
     <WorkContainer to={`/project/${id}`}>
       <Image src={require(`../assets/photos/${bannerImage}`)} />

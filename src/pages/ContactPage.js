@@ -106,7 +106,7 @@ const ContactPage = () => {
           />
         </FormFieldMessage>
         <p>* required field</p>
-        <Button name="Submit" type="submit" disabled={state.submitting} />
+        <Button name="Submit" disabled={state.submitting} />
       </ContactForm>
     </ContactContainer>
   );

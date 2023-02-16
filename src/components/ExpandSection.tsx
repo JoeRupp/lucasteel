@@ -1,10 +1,15 @@
-import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
-const ExpandSection = ({ title, description, image }) => {
+type Props = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+const ExpandSection = ({ title, description, image }: Props) => {
   return (
-    <Container image={image}>
+    <Container>
       <Title>{title}</Title>
       <Image src={require(`../assets/photos/${image}`)} />
       <LineBreak />

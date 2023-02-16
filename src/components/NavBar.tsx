@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import MainLogo from "./MainLogo";
 import styled from "styled-components";
@@ -7,11 +7,15 @@ import HamburgerNav from "./HamburgerNav";
 import MobileNav from "./MobileNav";
 import { useClickOutside } from "../hooks/useClickOutside";
 
-const NavBar = () => {
-  const node = useRef();
+interface NavStylingProps {
+  navStyle: boolean;
+}
 
-  const [navStyle, setNavStyle] = useState(false);
-  const [openMobileNav, setOpenMobileNav] = useState(false);
+const NavBar = () => {
+  const node = useRef<HTMLDivElement>(null);
+
+  const [navStyle, setNavStyle] = useState<boolean>(false);
+  const [openMobileNav, setOpenMobileNav] = useState<boolean>(false);
 
   useClickOutside(node, () => setOpenMobileNav(false));
 
@@ -53,7 +57,7 @@ const NavBar = () => {
 
 export default NavBar;
 
-const Nav = styled.nav`
+const Nav = styled.nav<NavStylingProps>`
   background-color: ${(props) =>
     props.navStyle ? COLORS.black : "rgba(0, 0, 0, 0.5)"};
   display: flex;

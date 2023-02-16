@@ -1,9 +1,14 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 
-const LinkButton = ({ name, action, link }) => {
+type Props = {
+  name: string;
+  action: () => any;
+  link: string;
+};
+
+const LinkButton = ({ name, action, link }: Props) => {
   return (
     <StyledBtn id="linkButton" to={link} onClick={action}>
       {name}
