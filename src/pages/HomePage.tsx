@@ -13,6 +13,12 @@ const HomePage: React.FC = () => {
       />
       <ServicesSection>
         <Header>WHAT WE OFFER:</Header>
+        <IntroParagraph>
+          LucaSteel and Fabrication is a welding and fabrication shop based out
+          of Denver, Colorado. We started the shop with the goal to create
+          one-of-a-kind products that fit the need of all and any clients. We
+          offer a wide range of services - check them out below.
+        </IntroParagraph>
         <ExpandableOrganizer id="expandableOrganizer">
           <ExpandSection
             title="Custom Projects"
@@ -87,6 +93,8 @@ const Header = styled.h1`
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2rem;
 `;
+
+const IntroParagraph = styled.p``;
 
 const ExpandableOrganizer = styled.div`
   margin: 5% 0% 8% 0%;
