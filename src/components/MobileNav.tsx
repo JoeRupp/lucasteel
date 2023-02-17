@@ -5,19 +5,29 @@ import { COLORS } from "../constants";
 
 type Props = {
   openMobileNav: boolean;
+  setOpenMobileNav: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 interface MobileNavProps {
   openMobileNav: boolean;
 }
 
-const MobileNav: React.FC<Props> = ({ openMobileNav }) => {
+const MobileNav: React.FC<Props> = ({ openMobileNav, setOpenMobileNav }) => {
   return (
     <MobileNavContainer openMobileNav={openMobileNav}>
-      <NavigationLink to="/" end>
+      <NavigationLink
+        to="/"
+        end
+        onClick={() => setOpenMobileNav(!openMobileNav)}
+      >
         Home
       </NavigationLink>
-      <NavigationLink to="/work">Work</NavigationLink>
+      <NavigationLink
+        to="/work"
+        onClick={() => setOpenMobileNav(!openMobileNav)}
+      >
+        Work
+      </NavigationLink>
       <ExternalLink
         href="https://www.etsy.com/shop/LucaSteel?listing_id=1170224592&ref=simple-shop-header-name"
         target="_blank"
@@ -25,8 +35,18 @@ const MobileNav: React.FC<Props> = ({ openMobileNav }) => {
       >
         Shop
       </ExternalLink>
-      <NavigationLink to="/about">About</NavigationLink>
-      <NavigationLink to="/contact">Contact</NavigationLink>
+      <NavigationLink
+        to="/about"
+        onClick={() => setOpenMobileNav(!openMobileNav)}
+      >
+        About
+      </NavigationLink>
+      <NavigationLink
+        to="/contact"
+        onClick={() => setOpenMobileNav(!openMobileNav)}
+      >
+        Contact
+      </NavigationLink>
     </MobileNavContainer>
   );
 };

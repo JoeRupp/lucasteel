@@ -37,7 +37,10 @@ const NavBar: React.FC = () => {
           openMobileNav={openMobileNav}
           setOpenMobileNav={setOpenMobileNav}
         />
-        <MobileNav openMobileNav={openMobileNav} />
+        <MobileNav
+          openMobileNav={openMobileNav}
+          setOpenMobileNav={setOpenMobileNav}
+        />
       </MobileNavContainer>
       <LinkContainer>
         <NavigationLink to="/work">Work</NavigationLink>
