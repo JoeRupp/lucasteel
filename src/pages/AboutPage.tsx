@@ -36,7 +36,7 @@ const AboutPage: React.FC = () => {
           <TeamMemberProfile
             name="Lucas Onorato"
             role="Owner/Founder"
-            bio="If you can dream it, we can build it.” Starting as a kid learning to weld, Lucas has turned his hobby into a business where anything can be made. With a background of working with talented local artists, Lucas quickly excelled in welding sculptures and decorative furnishings. With a passion for creativity and an eye for detail, Lucas can find the solutions clients need while fitting a unique artistic style."
+            bio="'If you can dream it, we can build it.' Starting as a kid learning to weld, Lucas has turned his hobby into a business where anything can be made. With a background of working with talented local artists, Lucas quickly excelled in welding sculptures and decorative furnishings. With a passion for creativity and an eye for detail, Lucas can find the solutions clients need while fitting a unique artistic style."
             picture="LucasProfile.png"
           />
           <TeamMemberProfile

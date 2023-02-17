@@ -43,16 +43,23 @@ const NavBar: React.FC = () => {
         />
       </MobileNavContainer>
       <LinkContainer>
-        <NavigationLink to="/work">Work</NavigationLink>
+        <NavigationLink id="workNav" to="/work">
+          Work
+        </NavigationLink>
         <ExternalLink
+          id="shopNav"
           href="https://www.etsy.com/shop/LucaSteel?listing_id=1170224592&ref=simple-shop-header-name"
           target="_blank"
           rel="noopener noreferrer"
         >
           Shop
         </ExternalLink>
-        <NavigationLink to="/about">About</NavigationLink>
-        <NavigationLink to="/contact">Contact</NavigationLink>
+        <NavigationLink id="aboutNav" to="/about">
+          About
+        </NavigationLink>
+        <NavigationLink id="contactNav" to="/contact">
+          Contact
+        </NavigationLink>
       </LinkContainer>
     </Nav>
   );
