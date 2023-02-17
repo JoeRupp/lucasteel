@@ -18,7 +18,7 @@ This is the repository for LucaSteel, a welding and fabrication business located
 - React
 - HTML
 - CSS
-- Javascript
+- TypeScript/JavaScript
 - Styled-Components
 - React Router
 - Cypress
