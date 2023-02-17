@@ -5,7 +5,10 @@ describe("LucaSteel contact page", () => {
 
   it("should include contact information", () => {
     cy.get("h1").first().should("have.text", "CONTACT US FOR A QUOTE:");
-    cy.get("#emailLink").should("have.attr", "href", "/contact");
+    cy.get("#emailLink").should(
+      "have.text",
+      "lucasteelandfabrication@gmail.com"
+    );
     cy.get("h2").should("have.text", "(720) 329-9769Wheat Ridge, CO 80033");
   });
 

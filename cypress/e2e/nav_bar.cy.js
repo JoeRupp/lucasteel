@@ -4,13 +4,13 @@ describe("LucaSteel navigation bar", () => {
   });
 
   it("should be able to navigate to the work page", () => {
-    cy.get("nav").contains("Work").click();
+    cy.get("nav").find("#workNav").click();
     cy.url().should("include", "/work");
   });
 
   it("should be able to navigate to the shop page", () => {
     cy.get("nav")
-      .contains("Shop")
+      .find("#shopNav")
       .should(
         "have.attr",
         "href",
@@ -19,17 +19,17 @@ describe("LucaSteel navigation bar", () => {
   });
 
   it("should be able to navigate to the about page", () => {
-    cy.get("nav").contains("About").click();
+    cy.get("nav").find("#aboutNav").click();
     cy.url().should("include", "/about");
   });
 
   it("should be able to navigate to the contact page", () => {
-    cy.get("nav").contains("Contact").click();
+    cy.get("nav").find("#contactNav").click();
     cy.url().should("include", "/contact");
   });
 
   it("should include the LucaSteel logo that navigates to the home page when clicked", () => {
-    cy.get("nav").contains("Contact").click();
+    cy.get("nav").find("#contactNav").click();
     cy.url().should("include", "/contact");
     cy.get("#lucaSteelLogo").click();
     cy.url().should("include", "");
