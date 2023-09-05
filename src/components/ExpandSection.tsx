@@ -12,7 +12,7 @@ const ExpandSection: React.FC<Props> = ({ title, description, image }) => {
   return (
     <Container>
       <Title>{title}</Title>
-      <Image src={require(`../assets/photos/${image}`)} />
+      <Image src={require(`../assets/photos/businessServices/${image}`)} />
       <LineBreak />
       <Description>{description}</Description>
     </Container>
