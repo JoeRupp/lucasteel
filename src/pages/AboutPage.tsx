@@ -8,7 +8,7 @@ const AboutPage: React.FC = () => {
     <AboutContainer>
       <HeroImage
         id="aboutPageHeroImage"
-        src={require("../assets/photos/sparkBanner.jpeg")}
+        src={require("../assets/photos/heroImages/grinding-sparks.png")}
       />
       <GeneralAboutSection>
         <SubHeader>ABOUT US:</SubHeader>
@@ -98,9 +98,9 @@ const AboutText = styled.p`
 `;
 
 const TeamProfileOrganizer = styled.div`
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
   gap: 5rem;
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
@@ -112,5 +112,4 @@ const TeamSection = styled.section`
   height: 100%;
   width: 80%;
   padding: 5% 10%;
-  display: grid;
 `;
