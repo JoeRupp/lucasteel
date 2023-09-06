@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import HeroImageCarousel from "../components/HeroImageCarousel";
 import LinkButton from "../components/LinkButton";
 import ExpandSection from "../components/ExpandSection";
 import { COLORS } from "../constants";
@@ -7,10 +8,11 @@ import { COLORS } from "../constants";
 const HomePage: React.FC = () => {
   return (
     <HomeContainer>
-      <HeroImage
+      <HeroImageCarousel></HeroImageCarousel>
+      {/* <HeroImage
         id="homePageHeroImage"
         src={require("../assets/photos/heroImages/04062023_Landino_DSC0455.jpg")}
-      />
+      /> */}
       <ServicesSection>
         <Header>WHAT WE OFFER:</Header>
         <IntroParagraph>
