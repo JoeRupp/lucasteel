@@ -83,7 +83,9 @@ const Header = styled.h1`
   font-size: 2rem;
 `;
 
-const IntroParagraph = styled.p``;
+const IntroParagraph = styled.p`
+  font-family: korolev, sans-serif;
+`;
 
 const ExpandableOrganizer = styled.div`
   margin: 5% 0% 8% 0%;

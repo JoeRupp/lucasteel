@@ -44,6 +44,8 @@ const LineBreak = styled.div`
 `;
 
 const Description = styled.p`
+  font-family: korolev, sans-serif;
+  font-size: 13px;
   margin: 1em;
 `;
 

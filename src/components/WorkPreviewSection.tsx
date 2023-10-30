@@ -57,6 +57,7 @@ const LineBreak = styled.div`
 `;
 
 const Description = styled.p`
+  font-family: korolev, sans-serif;
   width: 90%;
   color: ${COLORS.white};
   z-index: 1;

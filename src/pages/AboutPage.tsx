@@ -94,6 +94,7 @@ const SubHeaderTwo = styled.h1`
 
 const AboutText = styled.p`
   color: ${COLORS.white};
+  font-family: korolev, sans-serif;
   font-size: 1.2rem;
 `;
 

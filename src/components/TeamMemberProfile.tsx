@@ -46,5 +46,6 @@ const ProfileRole = styled.h3`
 `;
 
 const ProfileBio = styled.p`
+  font-family: korolev, sans-serif;
   font-size: 1.2rem;
 `;
