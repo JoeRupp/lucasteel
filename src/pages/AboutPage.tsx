@@ -13,8 +13,8 @@ const AboutPage: React.FC = () => {
       <GeneralAboutSection>
         <SubHeader>ABOUT US:</SubHeader>
         <AboutText>
-          LucaSteel Welding and Fabrication is a welding shop based out of
-          Denver, Colorado. Lucas Onorato, the owner, and founder, has 5+ years
+          LucaSteel Welding and Fabrication is a welding shop based out of Wheat
+          Ridge, Colorado. Lucas Onorato, the owner, and founder, has 5+ years
           of experience working with clients to build many projects varying in
           size and material. He started the shop with the goal to create
           one-of-a-kind products that fit the need of all and any clients.
