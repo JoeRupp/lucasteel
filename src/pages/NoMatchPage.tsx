@@ -6,7 +6,7 @@ const NoMatch: React.FC = () => {
   return (
     <NoMatchContainer>
       <HeroImage
-        src={require("../assets/photos/pete-wright-n1RJ7pXgGTE-unsplash.jpg")}
+        src={require("../assets/photos/heroImages/pete-wright-n1RJ7pXgGTE-unsplash.jpg")}
       />
       <NoMatchSection>
         <Header>404</Header>

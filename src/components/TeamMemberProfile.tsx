@@ -27,6 +27,7 @@ const ProfileContainer = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
+  max-width: 27rem;
 `;
 
 const ProfilePicture = styled.img`
@@ -45,5 +46,6 @@ const ProfileRole = styled.h3`
 `;
 
 const ProfileBio = styled.p`
+  font-family: korolev, sans-serif;
   font-size: 1.2rem;
 `;

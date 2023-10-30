@@ -97,7 +97,9 @@ const ProjectTitle = styled.h1`
   font-size: 2rem;
 `;
 
-const ProjectDescription = styled.p``;
+const ProjectDescription = styled.p`
+  font-family: korolev, sans-serif;
+`;
 
 const PictureOrganizer = styled.div`
   display: grid;

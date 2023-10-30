@@ -5,7 +5,7 @@ import { COLORS } from "../constants";
 type Props = {
   name: string;
   action?: () => any;
-  disabled: boolean;
+  disabled?: boolean;
 };
 
 const Button: React.FC<Props> = ({ name, action, disabled }) => {

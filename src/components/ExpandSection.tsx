@@ -12,7 +12,7 @@ const ExpandSection: React.FC<Props> = ({ title, description, image }) => {
   return (
     <Container>
       <Title>{title}</Title>
-      <Image src={require(`../assets/photos/${image}`)} />
+      <Image src={require(`../assets/photos/businessServices/${image}`)} />
       <LineBreak />
       <Description>{description}</Description>
     </Container>
@@ -44,6 +44,8 @@ const LineBreak = styled.div`
 `;
 
 const Description = styled.p`
+  font-family: korolev, sans-serif;
+  font-size: 13px;
   margin: 1em;
 `;
 
