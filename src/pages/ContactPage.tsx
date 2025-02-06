@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
           >
             lucasteelandfabrication@gmail.com
           </EmailInfo>
-          <Info>(720) 329-9769</Info>
+          <Info>(720) 316-3344</Info>
           <Info>Wheat Ridge, CO 80033</Info>
         </ContactDetails>
         <FormCompletionMessage id="formCompletionMessage">
@@ -43,7 +43,7 @@ const ContactPage: React.FC = () => {
         >
           lucasteelandfabrication@gmail.com
         </EmailInfo>
-        <Info>(720) 329-9769</Info>
+        <Info>(720) 316-3344</Info>
         <Info>Wheat Ridge, CO 80033</Info>
       </ContactDetails>
       <ContactForm onSubmit={handleSubmit}>
@@ -90,7 +90,7 @@ const ContactPage: React.FC = () => {
               id="telephone"
               type="telephone"
               name="telephone"
-              placeholder="(720) 329-9769"
+              placeholder="(720) 316-3344"
             ></Input>
           </FormField>
         </FormOrganizer>
@@ -99,7 +99,7 @@ const ContactPage: React.FC = () => {
           <MessageArea
             id="message"
             name="message"
-            placeholder="Tell us a little about what you are looking for here."
+            placeholder="Tell us what you are looking for"
           />
         </FormFieldMessage>
         <p>* required field</p>
