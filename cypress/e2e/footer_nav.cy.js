@@ -55,7 +55,7 @@ describe("LucaSteel footer", () => {
     cy.get("footer")
       .find("p")
       .contains(
-        "Copyright © 2023 LucaSteel Welding & Fabrication All Rights Reserved."
+        `Copyright © ${new Date().getFullYear()} LucaSteel Welding & Fabrication All Rights Reserved.`
       );
   });
 });

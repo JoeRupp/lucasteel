@@ -9,7 +9,7 @@ describe("LucaSteel contact page", () => {
       "have.text",
       "lucasteelandfabrication@gmail.com"
     );
-    cy.get("h2").should("have.text", "(720) 329-9769Wheat Ridge, CO 80033");
+    cy.get("h2").should("have.text", "(720) 316-3344Wheat Ridge, CO 80033");
   });
 
   it("should include a form for the user to fill out", () => {

@@ -110,7 +110,7 @@ const allProjects: Project[] = [
   },
   {
     id: 6,
-    title: "Cabinets",
+    title: "Cabinets/Wall Panels",
     description:
       "We pride ourselves on our ability to do unique finishes on steel, making a piece even more custom and one of a kind. This black oxide patina on these cabinets are a reaction that physically changes the outer surface of the steel allowing for a depth of feel not possible with paint. The patina gives the detail of the steel to be seen rather than covered and hidden.",
     bannerImage: "projectPhotos/cabinets/cabinets_1.jpg",

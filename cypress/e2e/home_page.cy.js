@@ -21,7 +21,7 @@ describe("LucaSteel home page", () => {
       .last()
       .should(
         "have.text",
-        "We use CAD to be able to show customers what a project will look like before construction. As well as the ability to design parts in-house and produce those parts."
+        "We use CAD to show customers what a project will look like before construction. This also gives us the ability to design parts in-house and then produce those parts."
       );
     cy.get("#expandableOrganizer").children().eq(3).find("img").should("exist");
   });
