@@ -4,7 +4,7 @@ describe("LucaSteel work page", () => {
   });
 
   it("should include a list of projects", () => {
-    cy.get("#workContainer").children().should("have.length", 7);
+    cy.get("#workContainer").children().should("have.length", 10);
   });
 
   it("should include a previews of each project", () => {
@@ -35,7 +35,7 @@ describe("LucaSteel work page", () => {
     cy.get("img").should(
       "have.attr",
       "src",
-      "/static/media/furniture_8.7a1537a3879ec14992b1.jpg"
+      "/static/media/furniture_2.5271e04224d1199a2533.jpg"
     );
     cy.get("h1").should("have.text", "Specialty and Custom Furniture");
     cy.get("p")
@@ -44,7 +44,7 @@ describe("LucaSteel work page", () => {
         "have.text",
         "Furniture in a home is always an eye-catcher. We can build furniture that is integrated or a movable unit that can be used for whatever you see fit. We work with clients to design their dream and make it a reality. We can fit any space and any aesthetic."
       );
-    cy.get("#pictureOrganizer").children().should("have.length", 9);
+    cy.get("#pictureOrganizer").children().should("have.length", 17);
   });
 
   it("should project pictures that open up a modal of an enlarged image when click", () => {
